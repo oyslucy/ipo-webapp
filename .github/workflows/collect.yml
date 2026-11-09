@@ -2,12 +2,20 @@ name: collect
 
 on:
   schedule:
-    # 15:00 UTC = 00:00 KST
+    # 15:00 UTC = 00:00 KST: full collection
     - cron: "0 15 * * *"
+    # Weekdays 09:00-16:30 KST, every 30 min: subscription ratios only
+    - cron: "*/30 0-7 * * 1-5"
   workflow_dispatch:
+    inputs:
+      live:
+        description: "Refresh only IPOs in their subscription window"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: collect
@@ -17,17 +25,28 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    env:
+      LIVE: ${{ github.event.schedule == '*/30 0-7 * * 1-5' || inputs.live == true }}
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
       - name: Collect
         working-directory: apps/api
-        run: uv run --frozen collect
-      - name: Commit data
+        run: uv run --frozen collect ${{ env.LIVE == 'true' && '--live' || '' }}
+      - name: Commit data and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add apps/web/public/data/ipos.json
           git diff --cached --quiet && exit 0
-          git commit -m "Chore: update ipo data"
+          if [ "$LIVE" = "true" ]; then
+            git commit -m "Chore: update live subscription data"
+          else
+            git commit -m "Chore: update ipo data"
+          fi
+          git pull --rebase
           git push
+          # Pushes made with GITHUB_TOKEN do not trigger other workflows, so deploy explicitly.
+          gh workflow run deploy.yml --ref main
