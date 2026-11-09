@@ -19,6 +19,7 @@ const DATE_KINDS: readonly { id: EventKind | 'any'; label: string }[] = [
   { id: 'forecast', label: '수요예측' },
 ]
 
+const INSTITUTION_PRESETS = [300, 500, 1000] as const
 const RATIO_PRESETS = [100, 500, 1000] as const
 
 export function FilterSheet({ open, filter, underwriters, resultCount, onChange, onClose }: Props) {
@@ -84,28 +85,46 @@ export function FilterSheet({ open, filter, underwriters, resultCount, onChange,
         </div>
       </Section>
 
-      <Section title="청약 경쟁률 (최소)">
-        <div className="flex flex-wrap gap-2">
-          {RATIO_PRESETS.map((ratio) => (
-            <Chip
-              key={ratio}
-              selected={filter.minRatio === ratio}
-              onClick={() => set({ minRatio: filter.minRatio === ratio ? null : ratio })}
-            >
-              {ratio.toLocaleString('ko-KR')} : 1 이상
-            </Chip>
-          ))}
-        </div>
-        <div className="mt-3">
-          <NumberInput
-            label="직접 입력"
-            value={filter.minRatio}
-            suffix=": 1 이상"
-            onChange={(minRatio) => set({ minRatio })}
-          />
-        </div>
-      </Section>
+      <RatioSection
+        title="기관 경쟁률 (최소)"
+        value={filter.minInstitutionRatio}
+        presets={INSTITUTION_PRESETS}
+        onChange={(minInstitutionRatio) => set({ minInstitutionRatio })}
+      />
+
+      <RatioSection
+        title="청약 경쟁률 (최소)"
+        value={filter.minRatio}
+        presets={RATIO_PRESETS}
+        onChange={(minRatio) => set({ minRatio })}
+      />
     </BottomSheet>
+  )
+}
+
+function RatioSection(props: {
+  title: string
+  value: number | null
+  presets: readonly number[]
+  onChange: (value: number | null) => void
+}) {
+  return (
+    <Section title={props.title}>
+      <div className="flex flex-wrap gap-2">
+        {props.presets.map((ratio) => (
+          <Chip
+            key={ratio}
+            selected={props.value === ratio}
+            onClick={() => props.onChange(props.value === ratio ? null : ratio)}
+          >
+            {ratio.toLocaleString('ko-KR')} : 1 이상
+          </Chip>
+        ))}
+      </div>
+      <div className="mt-3">
+        <NumberInput label={`${props.title} 직접 입력`} placeholder="직접 입력" value={props.value} suffix=": 1 이상" onChange={props.onChange} />
+      </div>
+    </Section>
   )
 }
 
@@ -141,6 +160,7 @@ function parseNumber(text: string): number | null {
 
 function NumberInput(props: {
   label: string
+  placeholder?: string
   value: number | null
   suffix?: string
   onChange: (value: number | null) => void
@@ -150,7 +170,7 @@ function NumberInput(props: {
       <input
         inputMode="numeric"
         aria-label={props.label}
-        placeholder={props.label}
+        placeholder={props.placeholder ?? props.label}
         value={props.value === null ? '' : props.value.toLocaleString('ko-KR')}
         onChange={(event) => props.onChange(parseNumber(event.target.value))}
         className={FIELD}

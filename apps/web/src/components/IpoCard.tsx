@@ -21,6 +21,7 @@ interface Fact {
 
 function factsFor(ipo: Ipo, tab: TabId): Fact[] {
   const underwriter = { label: '주관사', value: ipo.underwriters.join(', ') || '-' }
+  const institution = { label: '기관경쟁률', value: formatRatio(ipo.institution_ratio) }
   const price =
     ipo.fixed_price !== null
       ? { label: '공모가', value: formatWon(ipo.fixed_price) }
@@ -31,6 +32,7 @@ function factsFor(ipo: Ipo, tab: TabId): Fact[] {
       return [
         { label: '청약', value: formatRange(ipo.subscription_start, ipo.subscription_end) },
         price,
+        institution,
         underwriter,
       ]
     case 'forecast':
@@ -44,7 +46,8 @@ function factsFor(ipo: Ipo, tab: TabId): Fact[] {
       return [
         { label: '상장일', value: formatDate(ipo.listing_on) },
         price,
-        { label: '경쟁률', value: formatRatio(ipo.competition_ratio) },
+        institution,
+        { label: '청약경쟁률', value: formatRatio(ipo.competition_ratio) },
         underwriter,
       ]
     case 'examination':

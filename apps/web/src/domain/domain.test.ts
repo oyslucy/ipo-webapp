@@ -1,5 +1,14 @@
 import { describe, expect, it } from 'vitest'
-import { formatAmount, formatDate, formatPriceBand, formatRange, formatRatio } from './format'
+import {
+  formatAmount,
+  formatAmountRange,
+  formatDate,
+  formatEok,
+  formatPriceBand,
+  formatRange,
+  formatRatio,
+  formatShareRange,
+} from './format'
 import type { Ipo } from './ipo'
 import { todayKst } from './ipo'
 import { scheduleOf, stepState } from './schedule'
@@ -18,6 +27,8 @@ const base: Ipo = {
   fixed_price: null,
   offered_shares: null,
   offering_amount: null,
+  offering_amount_low: null,
+  offering_amount_high: null,
   competition_ratio: null,
   review_requested_on: null,
   approved_on: null,
@@ -30,8 +41,17 @@ const base: Ipo = {
   payment_on: null,
   refund_on: null,
   listing_on: null,
+  withdrawn_on: null,
   last_seen_on: '2026-11-09',
   in_feed: true,
+  institution_ratio: null,
+  general_shares_min: null,
+  general_shares_max: null,
+  margin_ratio: null,
+  company: null,
+  financials: [],
+  brokers: [],
+  documents: [],
 }
 const make = (patch: Partial<Ipo>): Ipo => ({ ...base, ...patch })
 
@@ -46,6 +66,13 @@ describe('format', () => {
     expect(formatPriceBand(17600, 17600)).toBe('17,600원')
     expect(formatAmount(42_240_000_000)).toBe('422억원')
     expect(formatRatio(1219.37)).toBe('1,219.37 : 1')
+  })
+  it('formats shares and amounts like brokers do', () => {
+    expect(formatShareRange(600_000, 720_000)).toBe('60만 ~ 72만주')
+    expect(formatShareRange(2_400_000, null)).toBe('240만주')
+    expect(formatShareRange(507_500, 609_000)).toBe('50.75만 ~ 60.9만주')
+    expect(formatAmountRange(37_680_000_000, 42_240_000_000)).toBe('377억 ~ 422억원')
+    expect(formatEok(-618_998_983)).toBe('-6.2')
   })
 })
 

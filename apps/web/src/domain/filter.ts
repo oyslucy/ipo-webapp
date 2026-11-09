@@ -15,6 +15,7 @@ export interface IpoFilter {
   dateFrom: string | null
   dateTo: string | null
   minRatio: number | null
+  minInstitutionRatio: number | null
 }
 
 export const EMPTY_FILTER: IpoFilter = {
@@ -26,6 +27,7 @@ export const EMPTY_FILTER: IpoFilter = {
   dateFrom: null,
   dateTo: null,
   minRatio: null,
+  minInstitutionRatio: null,
 }
 
 const normalize = (text: string) => text.toLowerCase().replace(/\s+/g, '')
@@ -56,6 +58,10 @@ function bandOverlaps(low: number | null, high: number | null, range: NumberRang
   return (range.max === null || lo <= range.max) && (range.min === null || hi >= range.min)
 }
 
+function atLeast(value: number | null, min: number | null): boolean {
+  return min === null || (value !== null && value >= min)
+}
+
 function matchesDate(ipo: Ipo, filter: IpoFilter): boolean {
   if (filter.dateFrom === null && filter.dateTo === null) return true
   const from = filter.dateFrom ?? '0000-01-01'
@@ -73,8 +79,8 @@ export function matchesFilter(ipo: Ipo, filter: IpoFilter): boolean {
     bandOverlaps(ipo.hope_price_low, ipo.hope_price_high, filter.hopePrice) &&
     inRange(ipo.fixed_price, filter.fixedPrice) &&
     matchesDate(ipo, filter) &&
-    (filter.minRatio === null ||
-      (ipo.competition_ratio !== null && ipo.competition_ratio >= filter.minRatio))
+    atLeast(ipo.competition_ratio, filter.minRatio) &&
+    atLeast(ipo.institution_ratio, filter.minInstitutionRatio)
   )
 }
 
@@ -86,6 +92,7 @@ export function activeFilterCount(filter: IpoFilter): number {
     rangeIsSet(filter.fixedPrice),
     filter.dateFrom !== null || filter.dateTo !== null,
     filter.minRatio !== null,
+    filter.minInstitutionRatio !== null,
   ].filter(Boolean).length
 }
 

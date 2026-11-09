@@ -2,6 +2,8 @@ import type { Ipo } from './ipo'
 
 export type SortKey =
   | 'schedule'
+  | 'institution_desc'
+  | 'institution_asc'
   | 'ratio_desc'
   | 'ratio_asc'
   | 'price_desc'
@@ -10,8 +12,10 @@ export type SortKey =
 
 export const SORT_OPTIONS: readonly { key: SortKey; label: string }[] = [
   { key: 'schedule', label: '일정순' },
-  { key: 'ratio_desc', label: '경쟁률 높은순' },
-  { key: 'ratio_asc', label: '경쟁률 낮은순' },
+  { key: 'institution_desc', label: '기관경쟁률 높은순' },
+  { key: 'institution_asc', label: '기관경쟁률 낮은순' },
+  { key: 'ratio_desc', label: '청약경쟁률 높은순' },
+  { key: 'ratio_asc', label: '청약경쟁률 낮은순' },
   { key: 'price_desc', label: '공모가 높은순' },
   { key: 'price_asc', label: '공모가 낮은순' },
   { key: 'amount_desc', label: '공모금액 큰순' },
@@ -27,6 +31,8 @@ function priceOf(ipo: Ipo): number | null {
 }
 
 const METRIC: Record<Exclude<SortKey, 'schedule'>, [(ipo: Ipo) => number | null, 1 | -1]> = {
+  institution_desc: [(ipo) => ipo.institution_ratio, -1],
+  institution_asc: [(ipo) => ipo.institution_ratio, 1],
   ratio_desc: [(ipo) => ipo.competition_ratio, -1],
   ratio_asc: [(ipo) => ipo.competition_ratio, 1],
   price_desc: [priceOf, -1],

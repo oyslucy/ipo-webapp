@@ -12,6 +12,7 @@ const ipo = (patch: Partial<Ipo>): Ipo =>
     hope_price_high: 17600,
     fixed_price: 17600,
     competition_ratio: 1219.37,
+    institution_ratio: 871.74,
     forecast_start: null,
     forecast_end: null,
     subscription_start: '2026-11-06',
@@ -50,6 +51,11 @@ describe('matchesFilter', () => {
     expect(matchesFilter(target, f({ ...nov18, dateKind: 'listing' }))).toBe(true)
     expect(matchesFilter(target, f({ ...nov18, dateKind: 'subscription' }))).toBe(false)
     expect(matchesFilter(target, f({ dateFrom: '2026-12-01', dateTo: null }))).toBe(false)
+  })
+  it('filters by minimum institution ratio', () => {
+    expect(matchesFilter(target, f({ minInstitutionRatio: 500 }))).toBe(true)
+    expect(matchesFilter(target, f({ minInstitutionRatio: 1000 }))).toBe(false)
+    expect(matchesFilter(ipo({ institution_ratio: null }), f({ minInstitutionRatio: 1 }))).toBe(false)
   })
   it('filters by minimum competition ratio', () => {
     expect(matchesFilter(target, f({ minRatio: 1000 }))).toBe(true)
