@@ -8,6 +8,7 @@ from zoneinfo import ZoneInfo
 import httpx
 
 from ipo_api.detail import DetailSchemaError, carry_detail, with_detail
+from ipo_api.live import in_subscription
 from ipo_api.merge import merge
 from ipo_api.models import Ipo
 from ipo_api.naver import fetch_detail, fetch_progress
@@ -37,14 +38,33 @@ def enrich(fresh: list[Ipo], previous: list[Ipo]) -> list[Ipo]:
     return enriched
 
 
+def refresh_live(ipos: list[Ipo], today: str) -> list[Ipo]:
+    """Re-fetch details only for IPOs whose subscription is open today."""
+    targets = [ipo for ipo in ipos if in_subscription(ipo, today)]
+    refreshed = {ipo["code"]: ipo for ipo in enrich(targets, ipos)} if targets else {}
+    return [refreshed.get(ipo["code"], ipo) for ipo in ipos]
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Collect IPO data from Naver")
     parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--live",
+        action="store_true",
+        help="only refresh IPOs in their subscription window; write only on change",
+    )
     args = parser.parse_args()
 
     now = datetime.now(KST)
+    today = now.date().isoformat()
     previous = load_ipos(args.out)
-    fresh = normalize_response(fetch_progress(), today=now.date().isoformat())
-    ipos = merge(previous, enrich(fresh, previous))
+    if args.live:
+        ipos = refresh_live(previous, today)
+        if ipos == previous:
+            print("no live changes")
+            return
+    else:
+        fresh = normalize_response(fetch_progress(), today=today)
+        ipos = merge(previous, enrich(fresh, previous))
     save_dataset(args.out, {"fetched_at": now.isoformat(timespec="seconds"), "ipos": ipos})
-    print(f"saved {len(ipos)} ipos ({len(fresh)} in feed) to {args.out}")
+    print(f"saved {len(ipos)} ipos to {args.out}")
