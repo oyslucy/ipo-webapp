@@ -14,31 +14,31 @@ export interface IpoEvent {
 export type EventPhase = 'start' | 'ongoing' | 'end' | 'single'
 
 export function eventsOf(ipos: readonly Ipo[], today: string): IpoEvent[] {
-  return ipos
-    .filter((ipo) => tabOf(ipo, today) !== null)
-    .flatMap((ipo) => {
-      const events: IpoEvent[] = []
-      if (ipo.forecast_start) {
-        events.push({
-          kind: 'forecast',
-          ipo,
-          start: ipo.forecast_start,
-          end: ipo.forecast_end ?? ipo.forecast_start,
-        })
-      }
-      if (ipo.subscription_start) {
-        events.push({
-          kind: 'subscription',
-          ipo,
-          start: ipo.subscription_start,
-          end: ipo.subscription_end ?? ipo.subscription_start,
-        })
-      }
-      if (ipo.listing_on) {
-        events.push({ kind: 'listing', ipo, start: ipo.listing_on, end: ipo.listing_on })
-      }
-      return events
+  return ipos.filter((ipo) => tabOf(ipo, today) !== null).flatMap(eventsForIpo)
+}
+
+export function eventsForIpo(ipo: Ipo): IpoEvent[] {
+  const events: IpoEvent[] = []
+  if (ipo.forecast_start) {
+    events.push({
+      kind: 'forecast',
+      ipo,
+      start: ipo.forecast_start,
+      end: ipo.forecast_end ?? ipo.forecast_start,
     })
+  }
+  if (ipo.subscription_start) {
+    events.push({
+      kind: 'subscription',
+      ipo,
+      start: ipo.subscription_start,
+      end: ipo.subscription_end ?? ipo.subscription_start,
+    })
+  }
+  if (ipo.listing_on) {
+    events.push({ kind: 'listing', ipo, start: ipo.listing_on, end: ipo.listing_on })
+  }
+  return events
 }
 
 /** Multi-day events skip weekends in between, since the market is closed. */
