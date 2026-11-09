@@ -2,10 +2,11 @@ name: collect
 
 on:
   schedule:
-    # 15:00 UTC = 00:00 KST: full collection
-    - cron: "0 15 * * *"
-    # Weekdays 09:00-16:30 KST, every 30 min: subscription ratios only
-    - cron: "*/30 0-7 * * 1-5"
+    # Off the hour and half hour, where GitHub delays or drops scheduled runs.
+    # 15:07 UTC = 00:07 KST: full collection
+    - cron: "7 15 * * *"
+    # Weekdays 09:07-16:37 KST, every 30 min: subscription ratios only
+    - cron: "7,37 0-7 * * 1-5"
   workflow_dispatch:
     inputs:
       live:
@@ -26,7 +27,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      LIVE: ${{ github.event.schedule == '*/30 0-7 * * 1-5' || inputs.live == true }}
+      LIVE: ${{ github.event.schedule == '7,37 0-7 * * 1-5' || inputs.live == true }}
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6
