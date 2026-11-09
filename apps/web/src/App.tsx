@@ -1,16 +1,25 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useCallback, useMemo, useState } from 'react'
+import { FilterSheet } from './components/FilterSheet'
 import { IpoCard } from './components/IpoCard'
 import { IpoSheet } from './components/IpoSheet'
 import { MonthCalendar } from './components/MonthCalendar'
+import { SearchBar } from './components/SearchBar'
 import { StageTabs } from './components/StageTabs'
 import { ViewSwitch, type View } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
 import { useDataset } from './data/useDataset'
 import { eventsOf } from './domain/events'
+import {
+  activeFilterCount,
+  EMPTY_FILTER,
+  matchesFilter,
+  underwriterOptions,
+  type IpoFilter,
+} from './domain/filter'
 import { todayKst, type Dataset, type Ipo } from './domain/ipo'
 import { summarize } from './domain/summary'
-import { firstNonEmptyTab, groupByTab, TABS, type TabId } from './domain/tabs'
+import { firstNonEmptyTab, groupByTab, tabOf, TABS, type TabId } from './domain/tabs'
 
 export default function App() {
   const state = useDataset()
@@ -31,11 +40,22 @@ export default function App() {
 
 function Board({ dataset }: { dataset: Dataset }) {
   const today = todayKst()
-  const events = useMemo(() => eventsOf(dataset.ipos, today), [dataset, today])
-  const summary = useMemo(() => summarize(events, today), [events, today])
+  const [filter, setFilter] = useState<IpoFilter>(EMPTY_FILTER)
+  const [filterOpen, setFilterOpen] = useState(false)
   const [view, setView] = useState<View>('calendar')
   const [selected, setSelected] = useState<Ipo | null>(null)
   const close = useCallback(() => setSelected(null), [])
+  const closeFilter = useCallback(() => setFilterOpen(false), [])
+
+  // The weekly summary stays unfiltered; search and filters narrow the calendar and list.
+  const summary = useMemo(() => summarize(eventsOf(dataset.ipos, today), today), [dataset, today])
+  const underwriters = useMemo(() => underwriterOptions(dataset.ipos), [dataset])
+  const visible = useMemo(
+    () => dataset.ipos.filter((ipo) => tabOf(ipo, today) !== null && matchesFilter(ipo, filter)),
+    [dataset, filter, today],
+  )
+  const events = useMemo(() => eventsOf(visible, today), [visible, today])
+  const filterCount = activeFilterCount(filter)
 
   return (
     <>
@@ -49,13 +69,39 @@ function Board({ dataset }: { dataset: Dataset }) {
         <ViewSwitch view={view} onChange={setView} />
       </div>
       <div className="mt-3">
+        <SearchBar
+          query={filter.query}
+          filterCount={filterCount}
+          onQueryChange={(query) => setFilter({ ...filter, query })}
+          onOpenFilter={() => setFilterOpen(true)}
+        />
+        {(filter.query !== '' || filterCount > 0) && (
+          <div className="mt-2 flex items-center justify-between px-1 text-sm">
+            <span className="text-gray-500">
+              <b className="text-brand-600 tabular-nums">{visible.length}</b>개 종목
+            </span>
+            <button onClick={() => setFilter(EMPTY_FILTER)} className="text-gray-500 underline-offset-2 active:underline">
+              전체 초기화
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="mt-3">
         {view === 'calendar' ? (
           <MonthCalendar events={events} today={today} onSelect={setSelected} />
         ) : (
-          <StageList ipos={dataset.ipos} today={today} onSelect={setSelected} />
+          <StageList ipos={visible} today={today} onSelect={setSelected} />
         )}
       </div>
       <IpoSheet ipo={selected} today={today} onClose={close} />
+      <FilterSheet
+        open={filterOpen}
+        filter={filter}
+        underwriters={underwriters}
+        resultCount={visible.length}
+        onChange={setFilter}
+        onClose={closeFilter}
+      />
     </>
   )
 }
@@ -89,7 +135,7 @@ function StageList({ ipos, today, onSelect }: StageListProps) {
           transition={{ duration: 0.15 }}
         >
           {groups[tab].length === 0 && (
-            <li className="py-16 text-center text-sm text-gray-400">해당 종목이 없어요</li>
+            <li className="py-16 text-center text-sm text-gray-400">조건에 맞는 종목이 없어요</li>
           )}
           {groups[tab].map((ipo) => (
             <li key={ipo.code}>
