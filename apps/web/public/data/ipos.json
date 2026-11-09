@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T10:10:10+09:00",
+  "fetched_at": "2026-11-09T13:20:04+09:00",
   "ipos": [
     {
       "code": "A268210",
@@ -16,6 +16,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-05-06",
       "approved_on": null,
@@ -28,8 +30,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": "2026-10-29",
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2011-12-09",
+        "ceo": "윤석호",
+        "employees": 86,
+        "products": "고압산소치료챔버(HBOT)",
+        "homepage": "www.ibex.co.kr",
+        "largest_shareholder": "윤석호",
+        "largest_share_ratio": 32.8,
+        "company_class": "이노비즈&벤처",
+        "address": "강원특별자치도 원주시 지정면 신평로 20"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "NH투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A088920",
@@ -46,6 +80,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-06-25",
       "approved_on": null,
@@ -58,10 +94,53 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": "2026-10-26",
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "1999-05-17",
+        "ceo": "안재봉",
+        "employees": 144,
+        "products": "산업자동화 솔루션(SCADA, PLC, HMI 등)",
+        "homepage": "www.cimon.com",
+        "largest_shareholder": "안재봉",
+        "largest_share_ratio": 49.0,
+        "company_class": "이노비즈",
+        "address": "경기도 용인시 수지구 포은대로59번길 40, 9층,8층,1층,비 201-비213호"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": null,
+      "financials": [],
+      "brokers": [],
+      "documents": [],
+      "offering_amount_low": null,
+      "offering_amount_high": null,
+      "withdrawn_on": null,
       "code": "A0013H0",
       "name": "이나인페이",
       "market": "KOSDAQ",
@@ -89,7 +168,7 @@
       "refund_on": null,
       "listing_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": false
     },
     {
       "code": "A0190D0",
@@ -106,6 +185,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-23",
       "approved_on": null,
@@ -118,8 +199,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2018-06-01",
+        "ceo": "이재원",
+        "employees": 30,
+        "products": "CD19 표적 CAR-T 치료제, MUC1 표적 CAR-T 치료제",
+        "homepage": "www.ticaros.com/kr",
+        "largest_shareholder": "최경호",
+        "largest_share_ratio": 23.0,
+        "company_class": "이노비즈&벤처",
+        "address": "서울특별시 성동구 연무장길 76, 성수 AK 밸리 1101-1106, 1111호"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "키움증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A360680",
@@ -136,6 +249,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-23",
       "approved_on": null,
@@ -148,8 +263,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2014-02-28",
+        "ceo": "하영빈",
+        "employees": 53,
+        "products": "해킹방지 솔루션 (제품명: Eversafe), 피싱방지 솔루션 (제품명: FakeFinder)",
+        "homepage": "everspin.global/ko",
+        "largest_shareholder": "하영빈",
+        "largest_share_ratio": 26.0,
+        "company_class": "이노비즈&벤처",
+        "address": "서울특별시 동작구 노량진로 188"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "KB증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A104930",
@@ -167,6 +314,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-27",
       "approved_on": null,
@@ -179,8 +328,52 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "1999-12-01",
+        "ceo": "장병화",
+        "employees": 50,
+        "products": "산업용 난방보일러, 금속탱크 및 유사 용기 제조업",
+        "homepage": "cryos.co.kr",
+        "largest_shareholder": "(주)대창솔루션",
+        "largest_share_ratio": 49.0,
+        "company_class": "이노비즈&벤처",
+        "address": "부산광역시 강서구 화전산단1로 155"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "KB증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "교보증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A0206T0",
@@ -198,6 +391,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-28",
       "approved_on": null,
@@ -210,8 +405,52 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2012-09-11",
+        "ceo": "이택선",
+        "employees": 102,
+        "products": "반도체 테스트 핸들러",
+        "homepage": "ateco.co.kr",
+        "largest_shareholder": "이택선",
+        "largest_share_ratio": 27.0,
+        "company_class": "벤처",
+        "address": "경기도 군포시 군포첨단산업2로 81"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "IBK투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "미래에셋증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A0204J0",
@@ -228,6 +467,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-30",
       "approved_on": null,
@@ -240,8 +481,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2018-04-16",
+        "ceo": "김현수",
+        "employees": 77,
+        "products": "산업 특화 비전 AI 솔루션",
+        "homepage": "www.superb-ai.com/ko",
+        "largest_shareholder": "김현수",
+        "largest_share_ratio": 7.0,
+        "company_class": "이노비즈&벤처",
+        "address": "서울특별시 강남구 테헤란로 427, 18층 101호(삼성동, 위워크타워)"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A0259N0",
@@ -258,6 +531,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-30",
       "approved_on": null,
@@ -270,8 +545,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2026-10-12",
+        "ceo": "홍영만",
+        "employees": null,
+        "products": "금융 지원 서비스업",
+        "homepage": "bnkspac.com/",
+        "largest_shareholder": "컴퍼니케이파트너스 주식회사",
+        "largest_share_ratio": 97.0,
+        "company_class": "일반",
+        "address": "서울특별시 영등포구 국제금융로2길 24 6층 (여의도동, 비엔케이금융타워)"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "BNK증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A487290",
@@ -288,6 +595,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-10-30",
       "approved_on": null,
@@ -300,8 +609,40 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2013-02-26",
+        "ceo": "이장백",
+        "employees": 132,
+        "products": "방한 외국인 대상 환전 및 결제, 커머스 플랫폼",
+        "homepage": "www.orangesquare.kr/",
+        "largest_shareholder": "이종일",
+        "largest_share_ratio": 24.0,
+        "company_class": "벤처",
+        "address": "서울특별시 구로구 디지털로34길 43, 14층(구로동, 코오롱싸이언스밸리1차)"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A0130B0",
@@ -319,6 +660,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-11-04",
       "approved_on": null,
@@ -331,8 +674,52 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "1991-06-27",
+        "ceo": "조신일",
+        "employees": null,
+        "products": "화장품, 생활용품 및 건기식",
+        "homepage": "graceint.com",
+        "largest_shareholder": "조아브라함선",
+        "largest_share_ratio": 43.0,
+        "company_class": "일반",
+        "address": "서울특별시 강남구 논현로81길 11"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "유진투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "한국투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A347800",
@@ -350,6 +737,8 @@
       "fixed_price": null,
       "offered_shares": null,
       "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
       "competition_ratio": null,
       "review_requested_on": "2026-11-05",
       "approved_on": null,
@@ -362,8 +751,116 @@
       "payment_on": null,
       "refund_on": null,
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2015-03-03",
+        "ceo": "김대일, 신정우",
+        "employees": 356,
+        "products": "오피스 운영, 디지털 서비스 및 엔터프라이즈 솔루션",
+        "homepage": "www.fastfive.co.kr",
+        "largest_shareholder": "패스트트랙아시아 주식회사",
+        "largest_share_ratio": 32.0,
+        "company_class": "일반",
+        "address": "서울특별시 서초구 남부순환로333길 10, 1층 102호 2층 3층"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "대신증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "신한투자증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
+    },
+    {
+      "code": "A0266D0",
+      "name": "카카오페이증권제1호스팩",
+      "market": "KOSDAQ",
+      "industry": "금융 지원 서비스업",
+      "stage": "examination",
+      "status_text": "예비심사청구서제출",
+      "underwriters": [
+        "카카오페이증권"
+      ],
+      "hope_price_low": null,
+      "hope_price_high": null,
+      "fixed_price": null,
+      "offered_shares": null,
+      "offering_amount": null,
+      "offering_amount_low": null,
+      "offering_amount_high": null,
+      "competition_ratio": null,
+      "review_requested_on": "2026-11-06",
+      "approved_on": null,
+      "filed_on": null,
+      "forecast_start": null,
+      "forecast_end": null,
+      "subscription_start": null,
+      "subscription_end": null,
+      "allocation_on": null,
+      "payment_on": null,
+      "refund_on": null,
+      "listing_on": null,
+      "withdrawn_on": null,
+      "last_seen_on": "2026-11-09",
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": null,
+      "general_shares_max": null,
+      "margin_ratio": null,
+      "company": {
+        "founded_on": "2026-10-16",
+        "ceo": "라석환",
+        "employees": null,
+        "products": "기업인수합병",
+        "homepage": null,
+        "largest_shareholder": "컴퍼니케이파트너스㈜",
+        "largest_share_ratio": 99.0,
+        "company_class": "일반",
+        "address": "서울특별시 영등포구 국제금융로 10 One IFC 21층"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "카카오페이증권",
+          "role": null,
+          "allocated_shares": null,
+          "min_shares": null,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": []
     },
     {
       "code": "A0162D0",
@@ -380,6 +877,8 @@
       "fixed_price": 26500,
       "offered_shares": 2030000,
       "offering_amount": 53795000000,
+      "offering_amount_low": 46690000000,
+      "offering_amount_high": 53795000000,
       "competition_ratio": 1219.37,
       "review_requested_on": "2026-08-06",
       "approved_on": "2026-09-14",
@@ -392,8 +891,68 @@
       "payment_on": "2026-11-05",
       "refund_on": "2026-11-05",
       "listing_on": "2026-11-10",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 840.86,
+      "general_shares_min": 507500,
+      "general_shares_max": 609000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "1997-05-30",
+        "ceo": "조덕형",
+        "employees": 400,
+        "products": "샤워헤드, 챔버부품 등",
+        "homepage": "dwparts.net",
+        "largest_shareholder": "조덕형",
+        "largest_share_ratio": 45.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경기도 시흥시 공단1대로80번길 140"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 59475314000,
+          "operating_profit": 1087615000,
+          "net_profit": -5575289000
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 92254987000,
+          "operating_profit": 7755633000,
+          "net_profit": 3442612000
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 63253898000,
+          "operating_profit": 14537634000,
+          "net_profit": 11360975000
+        }
+      ],
+      "brokers": [
+        {
+          "name": "삼성증권",
+          "role": "대표",
+          "allocated_shares": 2030000,
+          "min_shares": 20,
+          "equal_shares": 253750,
+          "proportional_shares": 253750,
+          "total_ratio": 1219.37,
+          "proportional_ratio": 2437.75,
+          "applications": 238550,
+          "updated_at": "2026-11-03T16:08:39"
+        }
+      ],
+      "documents": [
+        {
+          "title": "동원파츠 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000114"
+        },
+        {
+          "title": "동원파츠 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000113"
+        }
+      ]
     },
     {
       "code": "A271160",
@@ -410,6 +969,8 @@
       "fixed_price": null,
       "offered_shares": 4400000,
       "offering_amount": null,
+      "offering_amount_low": 20680000000,
+      "offering_amount_high": 25080000000,
       "competition_ratio": null,
       "review_requested_on": "2026-05-29",
       "approved_on": "2026-08-28",
@@ -422,8 +983,68 @@
       "payment_on": "2026-11-13",
       "refund_on": "2026-11-13",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1100000,
+      "general_shares_max": 1320000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2007-01-12",
+        "ceo": "이명진, 손창환",
+        "employees": null,
+        "products": "항공기 치공구(39.52%), 항공기 조립(37.41%) 및 항공기부품(22.45%) 등",
+        "homepage": "hanaaero.com",
+        "largest_shareholder": "손창환",
+        "largest_share_ratio": 3.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경상남도 사천시 축동면 두량로 260"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 32306648802,
+          "operating_profit": 2854924813,
+          "net_profit": 1180619578
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 33286338798,
+          "operating_profit": 4988489314,
+          "net_profit": 2420372481
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 20591868272,
+          "operating_profit": 4830015490,
+          "net_profit": -117833618
+        }
+      ],
+      "brokers": [
+        {
+          "name": "IBK투자증권",
+          "role": "대표",
+          "allocated_shares": 4400000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "하나에어로다이내믹스 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260921000405&dcmNo=11587488"
+        },
+        {
+          "title": "하나에어로다이내믹스 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260921000405"
+        }
+      ]
     },
     {
       "code": "A0153R0",
@@ -440,6 +1061,8 @@
       "fixed_price": 16400,
       "offered_shares": 1780000,
       "offering_amount": 29192000000,
+      "offering_amount_low": 29192000000,
+      "offering_amount_high": 35956000000,
       "competition_ratio": 19.27,
       "review_requested_on": "2026-04-30",
       "approved_on": "2026-08-12",
@@ -452,8 +1075,68 @@
       "payment_on": "2026-11-05",
       "refund_on": "2026-11-05",
       "listing_on": "2026-11-11",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 152.36,
+      "general_shares_min": 445000,
+      "general_shares_max": 534000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2019-11-22",
+        "ceo": "김슬기",
+        "employees": null,
+        "products": "약국 통합 플랫폼",
+        "homepage": "baropharm.com",
+        "largest_shareholder": "김슬기",
+        "largest_share_ratio": 42.0,
+        "company_class": "벤처",
+        "address": "서울특별시 동작구 동작대로 77(사당동)"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 45538196401,
+          "operating_profit": -5450942486,
+          "net_profit": -17521948155
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 96724142625,
+          "operating_profit": -3931796486,
+          "net_profit": -9679456774
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 69007534299,
+          "operating_profit": 2212207391,
+          "net_profit": 1875225439
+        }
+      ],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": "대표",
+          "allocated_shares": 1780000,
+          "min_shares": 20,
+          "equal_shares": 222500,
+          "proportional_shares": 222500,
+          "total_ratio": 19.27,
+          "proportional_ratio": 38.54,
+          "applications": 52856,
+          "updated_at": "2026-11-03T16:08:39"
+        }
+      ],
+      "documents": [
+        {
+          "title": "바로팜 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000406"
+        },
+        {
+          "title": "바로팜 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000396"
+        }
+      ]
     },
     {
       "code": "A0206M0",
@@ -470,6 +1153,8 @@
       "fixed_price": null,
       "offered_shares": 2950000,
       "offering_amount": null,
+      "offering_amount_low": 29500000000,
+      "offering_amount_high": 38350000000,
       "competition_ratio": null,
       "review_requested_on": "2026-09-08",
       "approved_on": "2026-10-08",
@@ -482,8 +1167,68 @@
       "payment_on": "2026-11-17",
       "refund_on": "2026-11-17",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 737500,
+      "general_shares_max": 885000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2006-08-22",
+        "ceo": "김형가",
+        "employees": 186,
+        "products": "모터, 코어, 서브어셈블리 제조",
+        "homepage": "cnmmotor.com",
+        "largest_shareholder": "김형가",
+        "largest_share_ratio": 12.0,
+        "company_class": "일반",
+        "address": "경상남도 김해시 김해대로2635번길 29"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 219396809250,
+          "operating_profit": 13465218046,
+          "net_profit": 13008291532
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 238488924098,
+          "operating_profit": 21327288043,
+          "net_profit": 19868553768
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 145031217381,
+          "operating_profit": 11445399894,
+          "net_profit": 9495214347
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 2950000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "씨앤엠 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000412&dcmNo=11617318"
+        },
+        {
+          "title": "씨앤엠 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000412"
+        }
+      ]
     },
     {
       "code": "A450550",
@@ -501,6 +1246,8 @@
       "fixed_price": null,
       "offered_shares": 4300000,
       "offering_amount": null,
+      "offering_amount_low": 113520000000,
+      "offering_amount_high": 137170000000,
       "competition_ratio": null,
       "review_requested_on": "2026-06-11",
       "approved_on": "2026-10-12",
@@ -513,8 +1260,80 @@
       "payment_on": "2026-11-17",
       "refund_on": "2026-11-17",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1075000,
+      "general_shares_max": 1290000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2011-01-11",
+        "ceo": "장재원",
+        "employees": 133,
+        "products": "흑연펠트전극(GFE), 탄소기재(CS), 기체확산층(GDL)",
+        "homepage": "www.thejntg.com",
+        "largest_shareholder": "장재원",
+        "largest_share_ratio": 55.54,
+        "company_class": "이노비즈",
+        "address": "경기도 화성시 정남면 내향안길 240-11"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 21970121801,
+          "operating_profit": -4944366616,
+          "net_profit": -10418725588
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 72377618342,
+          "operating_profit": 21328478469,
+          "net_profit": 9904279031
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 60670967798,
+          "operating_profit": 18144462218,
+          "net_profit": 11665573793
+        }
+      ],
+      "brokers": [
+        {
+          "name": "대신증권",
+          "role": "대표",
+          "allocated_shares": 3225000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "NH투자증권",
+          "role": "공동",
+          "allocated_shares": 1075000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "제이앤티지 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000426&dcmNo=11617375"
+        },
+        {
+          "title": "제이앤티지 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261016000426"
+        }
+      ]
     },
     {
       "code": "A493410",
@@ -531,6 +1350,8 @@
       "fixed_price": 8000,
       "offered_shares": 5000000,
       "offering_amount": 40000000000,
+      "offering_amount_low": 52500000000,
+      "offering_amount_high": 65000000000,
       "competition_ratio": 13.26,
       "review_requested_on": "2026-07-21",
       "approved_on": "2026-09-17",
@@ -543,8 +1364,72 @@
       "payment_on": "2026-11-06",
       "refund_on": "2026-11-06",
       "listing_on": "2026-11-12",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 66.58,
+      "general_shares_min": 1250000,
+      "general_shares_max": 1500000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2021-04-12",
+        "ceo": "윤경완",
+        "employees": null,
+        "products": "면역항암제 불응암 치료제 개발",
+        "homepage": "www.nex-i.co.kr",
+        "largest_shareholder": "윤경완",
+        "largest_share_ratio": 14.0,
+        "company_class": "벤처",
+        "address": "서울특별시 송파구 송파대로 201, A동 1613호 (문정동, 송파 테라파워2)"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 14117481733,
+          "operating_profit": 1792280566,
+          "net_profit": -9108032919
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 5110328405,
+          "operating_profit": -16524329751,
+          "net_profit": -52814330175
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 3021157962,
+          "operating_profit": -2135000917,
+          "net_profit": -75438449802
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 5000000,
+          "min_shares": 10,
+          "equal_shares": 625000,
+          "proportional_shares": 625000,
+          "total_ratio": 13.26,
+          "proportional_ratio": 25.52,
+          "applications": 56990,
+          "updated_at": "2026-11-04T16:02:52"
+        }
+      ],
+      "documents": [
+        {
+          "title": "넥스아이 IR Book",
+          "url": "https://stock.pstatic.net/stock-ipo/A493410/irBook/A493410_irBook_20261030175002.pdf"
+        },
+        {
+          "title": "넥스아이 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000472"
+        },
+        {
+          "title": "넥스아이 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261030000467"
+        }
+      ]
     },
     {
       "code": "A498150",
@@ -561,6 +1446,8 @@
       "fixed_price": null,
       "offered_shares": 2000000,
       "offering_amount": null,
+      "offering_amount_low": 19200000000,
+      "offering_amount_high": 23400000000,
       "competition_ratio": null,
       "review_requested_on": "2026-04-10",
       "approved_on": "2026-07-30",
@@ -573,8 +1460,68 @@
       "payment_on": "2026-11-17",
       "refund_on": "2026-11-17",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 500000,
+      "general_shares_max": 600000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2015-01-22",
+        "ceo": "구보성",
+        "employees": 47,
+        "products": "3D 세포배양 플랫폼 및 서비스",
+        "homepage": "www.mbdbiotech.com",
+        "largest_shareholder": "구보성",
+        "largest_share_ratio": 9.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경기도 수원시 영통구 광교로 145, 차세대융합기술연구원 비동 8층, 9층"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 241699704,
+          "operating_profit": -6203112399,
+          "net_profit": -11030493626
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 1524039612,
+          "operating_profit": -5632598790,
+          "net_profit": -2125265687
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 889643758,
+          "operating_profit": -4160569683,
+          "net_profit": 11197798264
+        }
+      ],
+      "brokers": [
+        {
+          "name": "하나증권",
+          "role": "대표",
+          "allocated_shares": 2000000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "엠비디 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000329&dcmNo=11615696"
+        },
+        {
+          "title": "엠비디 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261015000329"
+        }
+      ]
     },
     {
       "code": "A345290",
@@ -591,6 +1538,8 @@
       "fixed_price": 11000,
       "offered_shares": 2300000,
       "offering_amount": 25300000000,
+      "offering_amount_low": 21620000000,
+      "offering_amount_high": 25300000000,
       "competition_ratio": 1342.66,
       "review_requested_on": "2026-07-31",
       "approved_on": "2026-09-14",
@@ -603,8 +1552,68 @@
       "payment_on": "2026-11-09",
       "refund_on": "2026-11-09",
       "listing_on": "2026-11-16",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 1163.35,
+      "general_shares_min": 575000,
+      "general_shares_max": 690000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2012-05-16",
+        "ceo": "장관섭",
+        "employees": null,
+        "products": "반도체 장비용 정밀부품, 디스플레이 장비용 정밀부품",
+        "homepage": "www.ykmc.kr",
+        "largest_shareholder": "장관섭",
+        "largest_share_ratio": 32.0,
+        "company_class": "이노비즈&벤처",
+        "address": "충청남도 아산시 둔포면 아산밸리중앙로 161"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 37059294350,
+          "operating_profit": -4735402266,
+          "net_profit": -8118557642
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 51608653632,
+          "operating_profit": 4476167263,
+          "net_profit": 2707892536
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 38624605041,
+          "operating_profit": 7948488209,
+          "net_profit": 8936674618
+        }
+      ],
+      "brokers": [
+        {
+          "name": "대신증권",
+          "role": "대표",
+          "allocated_shares": 2300000,
+          "min_shares": 20,
+          "equal_shares": 287500,
+          "proportional_shares": 287500,
+          "total_ratio": 1342.66,
+          "proportional_ratio": 2685.32,
+          "applications": 215502,
+          "updated_at": "2026-11-05T16:06:19"
+        }
+      ],
+      "documents": [
+        {
+          "title": "영광와이케이엠씨 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000181"
+        },
+        {
+          "title": "영광와이케이엠씨 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000312"
+        }
+      ]
     },
     {
       "code": "A493260",
@@ -621,6 +1630,8 @@
       "fixed_price": 12000,
       "offered_shares": 2200000,
       "offering_amount": 26400000000,
+      "offering_amount_low": 22000000000,
+      "offering_amount_high": 26400000000,
       "competition_ratio": 1343.32,
       "review_requested_on": "2026-04-08",
       "approved_on": "2026-09-21",
@@ -633,8 +1644,68 @@
       "payment_on": "2026-11-10",
       "refund_on": "2026-11-10",
       "listing_on": "2026-11-17",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 1201.81,
+      "general_shares_min": 550000,
+      "general_shares_max": 660000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2004-12-17",
+        "ceo": "이용범",
+        "employees": 189,
+        "products": "링레이저 자이로스코프(RLG) 및 광섬유자이로스코프(FOG) 핵심 부품 제조",
+        "homepage": "www.optonics.net",
+        "largest_shareholder": "이용범",
+        "largest_share_ratio": 32.0,
+        "company_class": "이노비즈&벤처",
+        "address": "광주광역시 북구 첨단벤처소로15번길 63"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 24824667606,
+          "operating_profit": 1433160568,
+          "net_profit": 2484813463
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 25602568905,
+          "operating_profit": 3599732034,
+          "net_profit": 2900968912
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 12345233411,
+          "operating_profit": 1424628401,
+          "net_profit": 1073834121
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 2200000,
+          "min_shares": 20,
+          "equal_shares": 275000,
+          "proportional_shares": 275000,
+          "total_ratio": 1343.17,
+          "proportional_ratio": 2685.34,
+          "applications": 244223,
+          "updated_at": "2026-11-06T16:00:50"
+        }
+      ],
+      "documents": [
+        {
+          "title": "옵토닉스 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000524"
+        },
+        {
+          "title": "옵토닉스 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261029000504"
+        }
+      ]
     },
     {
       "code": "A0175C0",
@@ -652,6 +1723,8 @@
       "fixed_price": null,
       "offered_shares": 800000,
       "offering_amount": null,
+      "offering_amount_low": 15200000000,
+      "offering_amount_high": 18400000000,
       "competition_ratio": null,
       "review_requested_on": "2026-05-29",
       "approved_on": "2026-08-20",
@@ -664,8 +1737,80 @@
       "payment_on": "2026-11-23",
       "refund_on": "2026-11-23",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 200000,
+      "general_shares_max": 240000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2011-04-19",
+        "ceo": "김재형",
+        "employees": 45,
+        "products": "LTE 및 5G 통신장비",
+        "homepage": "www.eu-cast.com",
+        "largest_shareholder": "김재형",
+        "largest_share_ratio": 19.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경기도 성남시 분당구 황새울로 262, 4층 (수내동, 성옥빌딩)"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 4123678197,
+          "operating_profit": -1013135296,
+          "net_profit": -3287280663
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 5933614624,
+          "operating_profit": -1826074490,
+          "net_profit": -3556298785
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 2242668053,
+          "operating_profit": -1678404653,
+          "net_profit": -1923367820
+        }
+      ],
+      "brokers": [
+        {
+          "name": "유진투자증권",
+          "role": "대표",
+          "allocated_shares": 760000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "신영증권",
+          "role": "인수",
+          "allocated_shares": 40000,
+          "min_shares": 50,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "유캐스트 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443&dcmNo=11622629"
+        },
+        {
+          "title": "유캐스트 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443"
+        }
+      ]
     },
     {
       "code": "A083030",
@@ -684,6 +1829,8 @@
       "fixed_price": null,
       "offered_shares": 5000000,
       "offering_amount": null,
+      "offering_amount_low": 158000000000,
+      "offering_amount_high": 180500000000,
       "competition_ratio": null,
       "review_requested_on": "2026-07-24",
       "approved_on": "2026-10-15",
@@ -696,8 +1843,92 @@
       "payment_on": "2026-11-23",
       "refund_on": "2026-11-23",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1250000,
+      "general_shares_max": 1500000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2000-04-20",
+        "ceo": "김용관",
+        "employees": 350,
+        "products": "OLED 유기재료 (OLED 발광층 소재: 블루호스트, 블루도판트 등)",
+        "homepage": "www.sfc-dye.com",
+        "largest_shareholder": "HODOGAYA CHEMICAL CO., LTD.",
+        "largest_share_ratio": 53.0,
+        "company_class": "일반",
+        "address": "충청북도 청주시 청원구 오창읍 과학산업5로 89"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 158124209837,
+          "operating_profit": 30449997730,
+          "net_profit": 30757881883
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 160791554731,
+          "operating_profit": 21665981690,
+          "net_profit": 25509269752
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 105847414271,
+          "operating_profit": 28538354863,
+          "net_profit": 19225639709
+        }
+      ],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": "대표",
+          "allocated_shares": 3750000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "한국투자증권",
+          "role": "공동",
+          "allocated_shares": 1000000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "삼성증권",
+          "role": "인수",
+          "allocated_shares": 250000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "에스에프씨 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368&dcmNo=11619244"
+        },
+        {
+          "title": "에스에프씨 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368"
+        }
+      ]
     },
     {
       "code": "A471800",
@@ -714,6 +1945,8 @@
       "fixed_price": 17600,
       "offered_shares": 2400000,
       "offering_amount": 42240000000,
+      "offering_amount_low": 37680000000,
+      "offering_amount_high": 42240000000,
       "competition_ratio": null,
       "review_requested_on": "2026-05-22",
       "approved_on": "2026-09-11",
@@ -726,8 +1959,68 @@
       "payment_on": "2026-11-11",
       "refund_on": "2026-11-11",
       "listing_on": "2026-11-18",
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": 871.74,
+      "general_shares_min": 600000,
+      "general_shares_max": 720000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2017-03-21",
+        "ceo": "강대희",
+        "employees": null,
+        "products": "융합 제어장치, 로봇용 힘/토크센서",
+        "homepage": "www.al-robot.com",
+        "largest_shareholder": "강대희",
+        "largest_share_ratio": 48.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경기도 부천시 원미구 평천로 655, 401동 601-1호"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 15064584490,
+          "operating_profit": 1877702335,
+          "net_profit": 1214906332
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 14984562642,
+          "operating_profit": -1342606832,
+          "net_profit": -21890559990
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 8403188771,
+          "operating_profit": -618998983,
+          "net_profit": 653240436
+        }
+      ],
+      "brokers": [
+        {
+          "name": "대신증권",
+          "role": "대표",
+          "allocated_shares": 2400000,
+          "min_shares": 10,
+          "equal_shares": 300000,
+          "proportional_shares": 300000,
+          "total_ratio": 395.5,
+          "proportional_ratio": 791.0,
+          "applications": 117367,
+          "updated_at": "2026-11-09T13:18:21"
+        }
+      ],
+      "documents": [
+        {
+          "title": "에이엘로봇 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000315"
+        },
+        {
+          "title": "에이엘로봇 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000314"
+        }
+      ]
     },
     {
       "code": "A0231Y0",
@@ -744,6 +2037,8 @@
       "fixed_price": null,
       "offered_shares": 6250000,
       "offering_amount": null,
+      "offering_amount_low": 12500000000,
+      "offering_amount_high": 12500000000,
       "competition_ratio": null,
       "review_requested_on": "2026-08-12",
       "approved_on": "2026-10-19",
@@ -756,8 +2051,49 @@
       "payment_on": "2026-11-27",
       "refund_on": "2026-11-27",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1562500,
+      "general_shares_max": 1875000,
+      "margin_ratio": 100.0,
+      "company": {
+        "founded_on": "2026-07-27",
+        "ceo": "제호석",
+        "employees": null,
+        "products": "기업인수합병",
+        "homepage": "-",
+        "largest_shareholder": "삼호그린인베스트먼트",
+        "largest_share_ratio": 95.0,
+        "company_class": "일반",
+        "address": "서울특별시 영등포구 국제금융로8길 16, 5층(여의도동, 신영증권빌딩)"
+      },
+      "financials": [],
+      "brokers": [
+        {
+          "name": "신영증권",
+          "role": "대표",
+          "allocated_shares": 6250000,
+          "min_shares": 50,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "신영스팩12호 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000471&dcmNo=11631778"
+        },
+        {
+          "title": "신영스팩12호 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000471"
+        }
+      ]
     },
     {
       "code": "A0111R0",
@@ -774,6 +2110,8 @@
       "fixed_price": null,
       "offered_shares": 2100000,
       "offering_amount": null,
+      "offering_amount_low": 23520000000,
+      "offering_amount_high": 28560000000,
       "competition_ratio": null,
       "review_requested_on": "2026-05-21",
       "approved_on": "2026-09-03",
@@ -786,8 +2124,68 @@
       "payment_on": "2026-12-02",
       "refund_on": "2026-12-02",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 525000,
+      "general_shares_max": 630000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2013-12-05",
+        "ceo": "안현수",
+        "employees": null,
+        "products": "항공기체 엔지니어링, 무인기 제조, 캐빈 솔루션 등",
+        "homepage": "www.anhstructure.com",
+        "largest_shareholder": "안현수",
+        "largest_share_ratio": 60.37,
+        "company_class": "이노비즈&벤처",
+        "address": "경상남도 진주시 범골로54번길 2"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 17490255868,
+          "operating_profit": -1426646313,
+          "net_profit": -1636167789
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 21364377709,
+          "operating_profit": -6053351,
+          "net_profit": -3980971865
+        },
+        {
+          "period": "2026년 3분기(연결)",
+          "sales": 13221427091,
+          "operating_profit": -3894587307,
+          "net_profit": -4369564786
+        }
+      ],
+      "brokers": [
+        {
+          "name": "NH투자증권",
+          "role": "대표",
+          "allocated_shares": 2100000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "에이엔에이치스트럭쳐 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000106&dcmNo=11638829"
+        },
+        {
+          "title": "에이엔에이치스트럭쳐 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000106"
+        }
+      ]
     },
     {
       "code": "A0227D0",
@@ -802,6 +2200,8 @@
       "fixed_price": null,
       "offered_shares": 6500000,
       "offering_amount": null,
+      "offering_amount_low": 13000000000,
+      "offering_amount_high": 13000000000,
       "competition_ratio": null,
       "review_requested_on": "2026-08-10",
       "approved_on": "2026-10-06",
@@ -814,8 +2214,36 @@
       "payment_on": "2026-12-07",
       "refund_on": "2026-12-07",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1625000,
+      "general_shares_max": 1950000,
+      "margin_ratio": 100.0,
+      "company": {
+        "founded_on": "2026-07-14",
+        "ceo": "현승철",
+        "employees": null,
+        "products": "기타 금융업",
+        "homepage": null,
+        "largest_shareholder": "(주)포지티브인베스트먼트파트너스",
+        "largest_share_ratio": 85.0,
+        "company_class": "일반",
+        "address": "서울특별시 영등포구 의사당대로 96"
+      },
+      "financials": [],
+      "brokers": [],
+      "documents": [
+        {
+          "title": "우리투자제1호스팩 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000285&dcmNo=11627412"
+        },
+        {
+          "title": "우리투자제1호스팩 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000285"
+        }
+      ]
     },
     {
       "code": "A464570",
@@ -832,6 +2260,8 @@
       "fixed_price": null,
       "offered_shares": 2200000,
       "offering_amount": null,
+      "offering_amount_low": 44000000000,
+      "offering_amount_high": 52800000000,
       "competition_ratio": null,
       "review_requested_on": "2026-07-27",
       "approved_on": "2026-10-15",
@@ -844,8 +2274,68 @@
       "payment_on": "2026-12-10",
       "refund_on": "2026-12-10",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 550000,
+      "general_shares_max": 660000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2019-03-18",
+        "ceo": "박희동",
+        "employees": null,
+        "products": "AI 플랫폼 Deepzema를 이용한 신약개발 : 궤양성대장염 치료제 (INV-008, INV-101), 흉터 치료제(INV-001)",
+        "homepage": "innovothera.co.kr",
+        "largest_shareholder": "박희동",
+        "largest_share_ratio": 17.0,
+        "company_class": "벤처",
+        "address": "서울특별시 마포구 마포대로 38, 507호"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": null,
+          "operating_profit": -12972168153,
+          "net_profit": 894268499
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 208780622,
+          "operating_profit": -11046786592,
+          "net_profit": -5428681629
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 6677810820,
+          "operating_profit": 1103121614,
+          "net_profit": -4790827365
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 2200000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "이노보테라퓨틱스 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000153&dcmNo=11621380"
+        },
+        {
+          "title": "이노보테라퓨틱스 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000153"
+        }
+      ]
     },
     {
       "code": "A480200",
@@ -863,6 +2353,8 @@
       "fixed_price": null,
       "offered_shares": 3000000,
       "offering_amount": null,
+      "offering_amount_low": 30000000000,
+      "offering_amount_high": 39000000000,
       "competition_ratio": null,
       "review_requested_on": "2026-05-29",
       "approved_on": "2026-10-15",
@@ -875,8 +2367,80 @@
       "payment_on": "2026-12-14",
       "refund_on": "2026-12-14",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 750000,
+      "general_shares_max": 900000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2020-07-09",
+        "ceo": "박정윤",
+        "employees": 166,
+        "products": "1)AX솔루션, 2)AX컨설팅, 3)AX제품",
+        "homepage": "interxlab.com",
+        "largest_shareholder": "박정윤",
+        "largest_share_ratio": 30.0,
+        "company_class": "이노비즈&벤처",
+        "address": "울산광역시 중구 종가6길 7"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 14659211578,
+          "operating_profit": -7284040369,
+          "net_profit": -12262522454
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 8644968154,
+          "operating_profit": -8279913421,
+          "net_profit": -20271848719
+        },
+        {
+          "period": "2026년(연결)",
+          "sales": 3726695279,
+          "operating_profit": -5961706449,
+          "net_profit": -6698883955
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 2700000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "BNK증권",
+          "role": "인수",
+          "allocated_shares": 300000,
+          "min_shares": 50,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "인터엑스 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022000478&dcmNo=11624615"
+        },
+        {
+          "title": "인터엑스 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261022000478"
+        }
+      ]
     },
     {
       "code": "A459650",
@@ -893,6 +2457,8 @@
       "fixed_price": null,
       "offered_shares": 4000000,
       "offering_amount": null,
+      "offering_amount_low": 21600000000,
+      "offering_amount_high": 27200000000,
       "competition_ratio": null,
       "review_requested_on": "2026-07-09",
       "approved_on": "2026-10-15",
@@ -905,8 +2471,68 @@
       "payment_on": "2026-12-15",
       "refund_on": "2026-12-15",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1000000,
+      "general_shares_max": 1200000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2012-05-08",
+        "ceo": "이성오",
+        "employees": 104,
+        "products": "양극재 원료 소재(탄산리튬, MHP 등) 등",
+        "homepage": "www.cisk.co.kr",
+        "largest_shareholder": "이성오",
+        "largest_share_ratio": 17.0,
+        "company_class": "이노비즈&벤처",
+        "address": "전남광주통합특별시 광산구 진곡산단중앙로 106"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 19532719561,
+          "operating_profit": -11432802973,
+          "net_profit": -12671096701
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 15984838298,
+          "operating_profit": -10256891053,
+          "net_profit": -11440309431
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 9668729922,
+          "operating_profit": -3551559471,
+          "net_profit": -4148538865
+        }
+      ],
+      "brokers": [
+        {
+          "name": "KB증권",
+          "role": "대표",
+          "allocated_shares": 4000000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "씨아이에스케미칼 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000343&dcmNo=11619129"
+        },
+        {
+          "title": "씨아이에스케미칼 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000343"
+        }
+      ]
     },
     {
       "code": "A103060",
@@ -923,6 +2549,8 @@
       "fixed_price": null,
       "offered_shares": 2816000,
       "offering_amount": null,
+      "offering_amount_low": 53504000000,
+      "offering_amount_high": 64768000000,
       "competition_ratio": null,
       "review_requested_on": "2026-07-31",
       "approved_on": "2026-10-08",
@@ -935,8 +2563,68 @@
       "payment_on": "2026-12-17",
       "refund_on": "2026-12-17",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 704000,
+      "general_shares_max": 844800,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "1979-05-25",
+        "ceo": "구자영, 구본승",
+        "employees": null,
+        "products": "파워&제어 솔루션, 방산 솔루션, 추진기 솔루션, MRO 솔루션",
+        "homepage": "www.kte.co.kr",
+        "largest_shareholder": "구자영",
+        "largest_share_ratio": 32.0,
+        "company_class": "일반",
+        "address": "부산광역시 강서구 녹산산업대로 95-12"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 164212617000,
+          "operating_profit": 17576458000,
+          "net_profit": 16665920000
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 173901043000,
+          "operating_profit": 17917219000,
+          "net_profit": 14242847000
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 82935312000,
+          "operating_profit": 7757989000,
+          "net_profit": 8261170000
+        }
+      ],
+      "brokers": [
+        {
+          "name": "NH투자증권",
+          "role": "대표",
+          "allocated_shares": 2816000,
+          "min_shares": 10,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "케이티이 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000336&dcmNo=11631063"
+        },
+        {
+          "title": "케이티이 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000336"
+        }
+      ]
     },
     {
       "code": "A273940",
@@ -953,6 +2641,8 @@
       "fixed_price": null,
       "offered_shares": 2200000,
       "offering_amount": null,
+      "offering_amount_low": 17600000000,
+      "offering_amount_high": 24200000000,
       "competition_ratio": null,
       "review_requested_on": "2026-07-30",
       "approved_on": "2026-10-12",
@@ -965,8 +2655,68 @@
       "payment_on": "2026-12-17",
       "refund_on": "2026-12-17",
       "listing_on": null,
+      "withdrawn_on": null,
       "last_seen_on": "2026-11-09",
-      "in_feed": true
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 550000,
+      "general_shares_max": 660000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2012-08-01",
+        "ceo": "오성진",
+        "employees": null,
+        "products": "발전용 연료전지 인버터, ESS용 PCS, 수전해 정류기",
+        "homepage": "www.destinpower.com",
+        "largest_shareholder": "오성진",
+        "largest_share_ratio": 17.0,
+        "company_class": "이노비즈&벤처",
+        "address": "전라남도 나주시 왕곡면 혁신산단3길 41"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 22912774879,
+          "operating_profit": 1514931612,
+          "net_profit": -8212090131
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 29851119607,
+          "operating_profit": 1653666484,
+          "net_profit": 5852314512
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 14805578844,
+          "operating_profit": -1444884725,
+          "net_profit": -27658828152
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 2200000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "데스틴파워 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000434&dcmNo=11631566"
+        },
+        {
+          "title": "데스틴파워 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261028000434"
+        }
+      ]
     }
   ]
 }
