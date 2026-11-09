@@ -1,0 +1,12 @@
+{
+  "name": "ipo-webapp",
+  "private": true,
+  "workspaces": [
+    "apps/web"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @ipo/web",
+    "build": "npm run build -w @ipo/web",
+    "lint": "npm run lint -w @ipo/web"
+  }
+}
