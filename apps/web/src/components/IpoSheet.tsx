@@ -15,6 +15,7 @@ import {
 } from '../domain/format'
 import type { Broker, Company, Financial, Ipo, IpoDocument } from '../domain/ipo'
 import { scheduleOf, stepState, type StepState } from '../domain/schedule'
+import { expectedEqualShares, formatExpectedShares } from '../domain/broker'
 import { BottomSheet } from './BottomSheet'
 
 interface Props {
@@ -152,6 +153,7 @@ function Brokers({ brokers }: { brokers: Broker[] }) {
                   ['균등 배정', shares(broker.equal_shares)],
                   ['비례 배정', shares(broker.proportional_shares)],
                   ['청약 건수', broker.applications === null ? '-' : `${broker.applications.toLocaleString('ko-KR')}건`],
+                  ['균등 예상', formatExpectedShares(expectedEqualShares(broker))],
                 ] as const
               ).map(([label, value]) => (
                 <div key={label} className="min-w-0">
