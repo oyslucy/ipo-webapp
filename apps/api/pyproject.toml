@@ -6,7 +6,9 @@ authors = [
     { name = "luckyyy", email = "oyslucy@naver.com" }
 ]
 requires-python = ">=3.12,<3.13"
-dependencies = []
+dependencies = [
+    "httpx>=0.28.1",
+]
 
 [project.scripts]
 collect = "ipo_api.collect:main"
