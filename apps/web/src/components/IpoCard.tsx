@@ -20,26 +20,36 @@ interface Fact {
 }
 
 function factsFor(ipo: Ipo, tab: TabId): Fact[] {
+  const underwriter = { label: '주관사', value: ipo.underwriters.join(', ') || '-' }
   const price =
     ipo.fixed_price !== null
       ? { label: '공모가', value: formatWon(ipo.fixed_price) }
       : { label: '희망가', value: formatPriceBand(ipo.hope_price_low, ipo.hope_price_high) }
   switch (tab) {
     case 'subscription':
-      return [{ label: '청약', value: formatRange(ipo.subscription_start, ipo.subscription_end) }, price]
+      return [
+        { label: '청약', value: formatRange(ipo.subscription_start, ipo.subscription_end) },
+        price,
+        underwriter,
+      ]
     case 'forecast':
-      return [{ label: '수요예측', value: formatRange(ipo.forecast_start, ipo.forecast_end) }, price]
+      return [
+        { label: '수요예측', value: formatRange(ipo.forecast_start, ipo.forecast_end) },
+        price,
+        underwriter,
+      ]
     case 'listing':
     case 'listed':
       return [
         { label: '상장일', value: formatDate(ipo.listing_on) },
         price,
         { label: '경쟁률', value: formatRatio(ipo.competition_ratio) },
+        underwriter,
       ]
     case 'examination':
       return [
         { label: '청구일', value: formatDate(ipo.review_requested_on) },
-        { label: '주관사', value: ipo.underwriters.join(', ') || '-' },
+        underwriter,
       ]
   }
 }

@@ -31,8 +31,11 @@ export function EventRow({ event, date, onSelect }: Props) {
       </span>
       <span className="min-w-0 flex-1">
         <span className="block truncate font-medium">{event.ipo.name}</span>
-        <span className="block text-xs text-gray-400 tabular-nums">
-          {event.start === event.end ? formatWon(price) : formatRange(event.start, event.end)}
+        <span className="block truncate text-xs text-gray-400 tabular-nums">
+          {[
+            event.start === event.end ? formatWon(price) : formatRange(event.start, event.end),
+            ...event.ipo.underwriters,
+          ].join(' · ')}
         </span>
       </span>
     </button>
