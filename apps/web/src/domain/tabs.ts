@@ -1,9 +1,10 @@
 import type { Ipo } from './ipo'
 
-export type TabId = 'subscription' | 'forecast' | 'listing' | 'examination' | 'listed'
+export type TabId = 'subscription' | 'upcoming' | 'forecast' | 'listing' | 'examination' | 'listed'
 
 export const TABS: readonly { id: TabId; label: string }[] = [
   { id: 'subscription', label: '청약' },
+  { id: 'upcoming', label: '청약 예정' },
   { id: 'forecast', label: '수요예측' },
   { id: 'listing', label: '상장 예정' },
   { id: 'examination', label: '심사 중' },
@@ -22,8 +23,10 @@ export function tabOf(ipo: Ipo, today: string): TabId | null {
     case 'subscription':
     case 'subscription_done':
       return 'subscription'
-    case 'demand_forecast':
+    // Demand forecast is over and only the subscription is left.
     case 'forecast_done':
+      return 'upcoming'
+    case 'demand_forecast':
       return 'forecast'
     case 'listing':
       return 'listing'
@@ -35,6 +38,7 @@ export function tabOf(ipo: Ipo, today: string): TabId | null {
 export function groupByTab(ipos: readonly Ipo[], today: string): Record<TabId, Ipo[]> {
   const groups: Record<TabId, Ipo[]> = {
     subscription: [],
+    upcoming: [],
     forecast: [],
     listing: [],
     examination: [],

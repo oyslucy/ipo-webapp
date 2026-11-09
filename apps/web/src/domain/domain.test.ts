@@ -55,6 +55,10 @@ describe('tabs', () => {
     expect(tabOf(make({ listing_on: '2026-11-05', in_feed: false }), today)).toBe('listed')
     expect(tabOf(make({ listing_on: '2026-11-10' }), today)).toBe('listing')
   })
+  it('separates upcoming subscriptions from running forecasts', () => {
+    expect(tabOf(make({ stage: 'forecast_done' }), today)).toBe('upcoming')
+    expect(tabOf(make({ stage: 'demand_forecast' }), today)).toBe('forecast')
+  })
   it('hides stale records without a listing date', () => {
     expect(tabOf(make({ stage: 'examination', in_feed: false }), today)).toBeNull()
   })

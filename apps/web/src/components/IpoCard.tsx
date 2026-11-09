@@ -27,6 +27,7 @@ function factsFor(ipo: Ipo, tab: TabId): Fact[] {
       : { label: '희망가', value: formatPriceBand(ipo.hope_price_low, ipo.hope_price_high) }
   switch (tab) {
     case 'subscription':
+    case 'upcoming':
       return [
         { label: '청약', value: formatRange(ipo.subscription_start, ipo.subscription_end) },
         price,
