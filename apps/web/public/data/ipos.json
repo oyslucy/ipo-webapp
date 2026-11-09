@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T14:30:15+09:00",
+  "fetched_at": "2026-11-09T23:18:09+09:00",
   "ipos": [
     {
       "institution_ratio": null,
@@ -1974,10 +1974,10 @@
           "min_shares": 10,
           "equal_shares": 300000,
           "proportional_shares": 300000,
-          "total_ratio": 510.34,
-          "proportional_ratio": 1020.68,
-          "applications": 136018,
-          "updated_at": "2026-11-09T14:27:49"
+          "total_ratio": 834.16,
+          "proportional_ratio": 1668.31,
+          "applications": 178615,
+          "updated_at": "2026-11-09T16:00:44"
         }
       ],
       "documents": [
