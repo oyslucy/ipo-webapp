@@ -5,6 +5,7 @@ import { IpoCard } from './components/IpoCard'
 import { IpoSheet } from './components/IpoSheet'
 import { MonthCalendar } from './components/MonthCalendar'
 import { SearchBar } from './components/SearchBar'
+import { SortSheet } from './components/SortSheet'
 import { StageTabs } from './components/StageTabs'
 import { ViewSwitch, type View } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
@@ -18,6 +19,7 @@ import {
   type IpoFilter,
 } from './domain/filter'
 import { todayKst, type Dataset, type Ipo } from './domain/ipo'
+import { sortIpos, sortLabel, type SortKey } from './domain/sort'
 import { summarize } from './domain/summary'
 import { firstNonEmptyTab, groupByTab, tabOf, TABS, type TabId } from './domain/tabs'
 
@@ -119,31 +121,50 @@ function StageList({ ipos, today, onSelect }: StageListProps) {
     [groups],
   )
   const [tab, setTab] = useState<TabId>(() => firstNonEmptyTab(groups))
+  const [sort, setSort] = useState<SortKey>('schedule')
+  const [sortOpen, setSortOpen] = useState(false)
+  const closeSort = useCallback(() => setSortOpen(false), [])
+  const items = useMemo(() => sortIpos(groups[tab], sort), [groups, tab, sort])
 
   return (
     <>
       <div className="sticky top-0 z-10 -mx-4 bg-gray-50/90 px-4 py-2 backdrop-blur">
         <StageTabs active={tab} counts={counts} onChange={setTab} />
       </div>
+      <div className="mt-1 flex items-center justify-between px-1">
+        <span className="text-sm text-gray-500 tabular-nums">{items.length}개</span>
+        <button
+          onClick={() => setSortOpen(true)}
+          className={`-mr-2 flex items-center gap-1 rounded-full px-3 py-1.5 text-sm font-medium active:bg-gray-100 ${
+            sort === 'schedule' ? 'text-gray-600' : 'text-brand-600'
+          }`}
+        >
+          <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth={2}>
+            <path d="M7 4v16M7 20l-3-3M7 20l3-3M17 20V4M17 4l-3 3M17 4l3 3" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+          {sortLabel(sort)}
+        </button>
+      </div>
       <AnimatePresence mode="wait">
         <motion.ul
-          key={tab}
+          key={`${tab}-${sort}`}
           className="mt-2 space-y-3"
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.15 }}
         >
-          {groups[tab].length === 0 && (
+          {items.length === 0 && (
             <li className="py-16 text-center text-sm text-gray-400">조건에 맞는 종목이 없어요</li>
           )}
-          {groups[tab].map((ipo) => (
+          {items.map((ipo) => (
             <li key={ipo.code}>
               <IpoCard ipo={ipo} tab={tab} onSelect={onSelect} />
             </li>
           ))}
         </motion.ul>
       </AnimatePresence>
+      <SortSheet open={sortOpen} value={sort} onChange={setSort} onClose={closeSort} />
     </>
   )
 }
