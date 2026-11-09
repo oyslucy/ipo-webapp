@@ -1,0 +1,110 @@
+{
+  "ipoCode": "A471800",
+  "stockType": "ipo",
+  "stockEndType": "ipo",
+  "isExistStockEnd": false,
+  "ipoInfo": {
+    "ipoStatus": "청약",
+    "compName": "에이엘로봇",
+    "compAddr": "경기도 부천시 원미구 평천로 655, 401동 601-1호",
+    "gsrClass": "G",
+    "dcalDate": "2026-05-22",
+    "acalDate": "2026-09-11",
+    "nacalDate": null,
+    "rwDate": null,
+    "regSmDate": "2026-09-21",
+    "dfStartDate": "2026-10-28",
+    "dfEndDate": "2026-11-03",
+    "pwDate": null,
+    "poStartDate": "2026-11-06",
+    "poEndDate": "2026-11-09",
+    "allocDate": "2026-11-11",
+    "payupDate": "2026-11-11",
+    "refundDate": "2026-11-11",
+    "lcalDate": "2026-11-18"
+  },
+  "listedExamination": {
+    "marketType": "KOSDAQ",
+    "compUpjong": "특수 목적용 기계 제조업",
+    "foundDate": "2017-03-21",
+    "compOwner": "강대희",
+    "empNum": null,
+    "compPrdt": "융합 제어장치, 로봇용 힘/토크센서",
+    "compUrl": "www.al-robot.com",
+    "largstShare": "강대희",
+    "largstShareRatio": "48.00",
+    "compClass": "이노비즈&벤처"
+  },
+  "registrationStatement": {
+    "poExptShares": "2400000",
+    "hopePubStart": "15700",
+    "hopePubEnd": "17600",
+    "pubPriceStart": "37680000000",
+    "pubPriceEnd": "42240000000",
+    "gnrlMinShares": "600000",
+    "gnrlMaxShares": "720000",
+    "sbscMrgnRatio": "50.00"
+  },
+  "registrationStatementDetail": {
+    "n0Ptitle": "2026년 2분기(개별)",
+    "n1Ptitle": "2025년 4분기(개별)",
+    "n2Ptitle": "2024년 4분기(개별)",
+    "n0Sales": "8403188771",
+    "n1Sales": "14984562642",
+    "n2Sales": "15064584490",
+    "n0BizPrft": "-618998983",
+    "n1BizPrft": "-1342606832",
+    "n2BizPrft": "1877702335",
+    "n0CrntPrft": "653240436",
+    "n1CrntPrft": "-21890559990",
+    "n2CrntPrft": "1214906332"
+  },
+  "demandForecastingResult": {
+    "fixPubPrice": "17600",
+    "fnlPoPrice": "42240000000",
+    "cmptnRate": "871.74"
+  },
+  "confirmedInfo": {
+    "fnlCmptRatio": null,
+    "stockPrice": null,
+    "stockRatio": null
+  },
+  "joinManagers": [
+    {
+      "priority": "1",
+      "orgNm": "대신증권",
+      "orgCode": "000004",
+      "orgType": "대표",
+      "orgAllcShares": "2400000",
+      "sbscMinNum": "10",
+      "orgPrtShares": "300000",
+      "orgEqlShares": "300000",
+      "ttlCmptRatio": "395.50",
+      "prtCmptRatio": "791.00",
+      "sbscNum": "117367",
+      "updtTm": "2026-11-09T13:15:20",
+      "accountOpenUrl": null,
+      "ipoStockApplyUrl": null,
+      "accountOpenNclick": null,
+      "ipoStockApplyNclick": null,
+      "myDataOrgCode": "C1AAKO0000",
+      "affiliated": false
+    }
+  ],
+  "irContents": [
+    {
+      "contentCode": "prospectus",
+      "displayName": "에이엘로봇 투자설명서",
+      "dataType": "link",
+      "linkUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000315",
+      "mdfyDt": "2026-11-04T17:18:17"
+    },
+    {
+      "contentCode": "report",
+      "displayName": "에이엘로봇 증권신고서",
+      "dataType": "link",
+      "linkUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000314",
+      "mdfyDt": "2026-11-04T17:18:17"
+    }
+  ]
+}

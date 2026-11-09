@@ -3,6 +3,8 @@
 from collections.abc import Mapping
 from typing import Any
 
+from ipo_api.detail import EMPTY_DETAIL
+from ipo_api.fields import integer, number, text
 from ipo_api.models import Ipo, Stage
 
 STAGE_KEYS: dict[str, Stage] = {
@@ -19,61 +21,47 @@ class SchemaError(ValueError):
     pass
 
 
-def _str(raw: Mapping[str, Any], key: str) -> str | None:
-    value = raw.get(key)
-    if value is None:
-        return None
-    text = str(value).strip()
-    return text or None
-
-
-def _int(raw: Mapping[str, Any], key: str) -> int | None:
-    text = _str(raw, key)
-    return None if text is None else int(float(text.replace(",", "")))
-
-
-def _float(raw: Mapping[str, Any], key: str) -> float | None:
-    text = _str(raw, key)
-    return None if text is None else float(text.replace(",", ""))
-
-
 def _split(raw: Mapping[str, Any], key: str) -> list[str]:
-    text = _str(raw, key)
-    return [] if text is None else [part.strip() for part in text.split(",") if part.strip()]
+    value = text(raw, key)
+    return [] if value is None else [part.strip() for part in value.split(",") if part.strip()]
 
 
 def normalize_item(raw: Mapping[str, Any], stage: Stage, today: str) -> Ipo:
-    code = _str(raw, "ipoCode")
-    name = _str(raw, "compName")
+    code = text(raw, "ipoCode")
+    name = text(raw, "compName")
     if code is None or name is None:
         raise SchemaError(f"missing ipoCode/compName in {dict(raw)}")
     return {
         "code": code,
         "name": name,
-        "market": _str(raw, "marketType"),
-        "industry": _str(raw, "compUpjong"),
+        "market": text(raw, "marketType"),
+        "industry": text(raw, "compUpjong"),
         "stage": stage,
-        "status_text": _str(raw, "ipoStatus"),
+        "status_text": text(raw, "ipoStatus"),
         "underwriters": _split(raw, "orgNm"),
-        "hope_price_low": _int(raw, "hopePubStart"),
-        "hope_price_high": _int(raw, "hopePubEnd"),
-        "fixed_price": _int(raw, "fixPubPrice"),
-        "offered_shares": _int(raw, "poExptShares"),
-        "offering_amount": _int(raw, "fnlPoPrice"),
-        "competition_ratio": _float(raw, "fnlCmptRatio"),
-        "review_requested_on": _str(raw, "dcalDate"),
-        "approved_on": _str(raw, "acalDate"),
-        "filed_on": _str(raw, "regSmDate"),
-        "forecast_start": _str(raw, "dfStartDate"),
-        "forecast_end": _str(raw, "dfEndDate"),
-        "subscription_start": _str(raw, "poStartDate"),
-        "subscription_end": _str(raw, "poEndDate"),
-        "allocation_on": _str(raw, "allocDate"),
-        "payment_on": _str(raw, "payupDate"),
-        "refund_on": _str(raw, "refundDate"),
-        "listing_on": _str(raw, "lcalDate"),
+        "hope_price_low": integer(raw, "hopePubStart"),
+        "hope_price_high": integer(raw, "hopePubEnd"),
+        "fixed_price": integer(raw, "fixPubPrice"),
+        "offered_shares": integer(raw, "poExptShares"),
+        "offering_amount": integer(raw, "fnlPoPrice"),
+        "offering_amount_low": integer(raw, "pubPriceStart"),
+        "offering_amount_high": integer(raw, "pubPriceEnd"),
+        "competition_ratio": number(raw, "fnlCmptRatio"),
+        "review_requested_on": text(raw, "dcalDate"),
+        "approved_on": text(raw, "acalDate"),
+        "filed_on": text(raw, "regSmDate"),
+        "forecast_start": text(raw, "dfStartDate"),
+        "forecast_end": text(raw, "dfEndDate"),
+        "subscription_start": text(raw, "poStartDate"),
+        "subscription_end": text(raw, "poEndDate"),
+        "allocation_on": text(raw, "allocDate"),
+        "payment_on": text(raw, "payupDate"),
+        "refund_on": text(raw, "refundDate"),
+        "listing_on": text(raw, "lcalDate"),
+        "withdrawn_on": text(raw, "rwDate"),
         "last_seen_on": today,
         "in_feed": True,
+        **EMPTY_DETAIL,
     }
 
 
