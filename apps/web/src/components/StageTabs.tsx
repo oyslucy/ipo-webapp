@@ -25,13 +25,13 @@ export function StageTabs({ active, counts, onChange }: Props) {
             {selected && (
               <motion.span
                 layoutId="tab-pill"
-                className="absolute inset-0 rounded-full bg-gray-900"
+                className="absolute inset-0 rounded-full bg-brand-600"
                 transition={{ type: 'spring', stiffness: 500, damping: 40 }}
               />
             )}
             <span className="relative">
               {tab.label}
-              <span className={`ml-1 ${selected ? 'text-gray-300' : 'text-gray-400'}`}>
+              <span className={`ml-1 ${selected ? 'text-brand-100' : 'text-gray-400'}`}>
                 {counts[tab.id]}
               </span>
             </span>

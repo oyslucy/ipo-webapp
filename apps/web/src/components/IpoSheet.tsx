@@ -19,7 +19,7 @@ interface Props {
 
 const DOT: Record<StepState, string> = {
   done: 'bg-gray-300',
-  active: 'bg-blue-500 ring-4 ring-blue-100',
+  active: 'bg-brand-600 ring-4 ring-brand-100',
   upcoming: 'bg-white border-2 border-gray-300',
 }
 

@@ -56,12 +56,12 @@ export function IpoCard({ ipo, tab, onSelect }: Props) {
       <div className="flex items-center gap-2">
         <h3 className="truncate text-base font-semibold">{ipo.name}</h3>
         {ipo.market && (
-          <span className="shrink-0 rounded bg-gray-100 px-1.5 py-0.5 text-[11px] text-gray-500">
+          <span className="shrink-0 rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
             {ipo.market}
           </span>
         )}
         {withdrawn && (
-          <span className="shrink-0 rounded bg-red-50 px-1.5 py-0.5 text-[11px] text-red-500">
+          <span className="shrink-0 rounded bg-red-50 px-1.5 py-0.5 text-xs text-red-500">
             철회
           </span>
         )}

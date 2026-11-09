@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef1ff;
+  --color-brand-100: #dfe4ff;
+  --color-brand-500: #5470ff;
+  --color-brand-600: #3d5afe;
+  --color-brand-700: #2e46d6;
+
+  /* One step larger than Tailwind defaults for comfortable mobile reading. */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.375rem;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+}
