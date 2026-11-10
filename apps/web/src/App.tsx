@@ -7,6 +7,7 @@ import { MonthCalendar } from './components/MonthCalendar'
 import { SearchBar } from './components/SearchBar'
 import { SortSheet } from './components/SortSheet'
 import { StageTabs } from './components/StageTabs'
+import { UpdatedBadge } from './components/UpdatedBadge'
 import { ViewSwitch, type View } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
 import { useDataset } from './data/useDataset'
@@ -28,9 +29,12 @@ export default function App() {
 
   return (
     <main className="mx-auto min-h-dvh max-w-md bg-gray-50 px-4 pt-[max(1.25rem,env(safe-area-inset-top))] pb-10 text-gray-900">
-      <h1 className="text-xl font-bold">
-        <span className="text-brand-600">공모주</span> 캘린더
-      </h1>
+      <header className="flex items-center justify-between gap-3">
+        <h1 className="text-xl font-bold">
+          <span className="text-brand-600">공모주</span> 캘린더
+        </h1>
+        {state.status === 'ready' && <UpdatedBadge fetchedAt={state.dataset.fetched_at} />}
+      </header>
       {state.status === 'loading' && <p className="mt-6 text-sm text-gray-400">불러오는 중…</p>}
       {state.status === 'error' && (
         <p className="mt-6 text-sm text-red-500">데이터를 불러오지 못했어요 ({state.message})</p>
@@ -61,9 +65,6 @@ function Board({ dataset }: { dataset: Dataset }) {
 
   return (
     <>
-      <p className="mt-1 text-xs text-gray-400">
-        {new Date(dataset.fetched_at).toLocaleString('ko-KR', { timeZone: 'Asia/Seoul' })} 기준
-      </p>
       <div className="mt-4">
         <WeekSummary summary={summary} />
       </div>
