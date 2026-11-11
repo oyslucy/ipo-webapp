@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-11T15:00:14+09:00",
+  "fetched_at": "2026-11-11T23:07:37+09:00",
   "ipos": [
     {
       "institution_ratio": null,
@@ -1790,10 +1790,10 @@
           "min_shares": 10,
           "equal_shares": 550000,
           "proportional_shares": 550000,
-          "total_ratio": 1427.92,
-          "proportional_ratio": 2855.84,
-          "applications": 108668,
-          "updated_at": "2026-11-11T14:59:56"
+          "total_ratio": 1851.14,
+          "proportional_ratio": 3702.28,
+          "applications": 129620,
+          "updated_at": "2026-11-11T16:00:22"
         }
       ],
       "documents": [
@@ -1827,7 +1827,7 @@
       "fixed_price": 5700,
       "offered_shares": 4400000,
       "offering_amount": 25080000000,
-      "competition_ratio": null,
+      "competition_ratio": 1851.14,
       "review_requested_on": "2026-05-29",
       "approved_on": "2026-08-28",
       "filed_on": "2026-09-21",
