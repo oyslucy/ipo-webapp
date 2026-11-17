@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T08:42:44+09:00",
+  "fetched_at": "2026-11-18T07:50:25+09:00",
   "ipos": [
     {
       "code": "A268210",
@@ -31,7 +31,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": "2026-10-29",
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -130,70 +130,6 @@
       "in_feed": false
     },
     {
-      "code": "A0159M0",
-      "name": "엠디에스코리아",
-      "market": "KOSDAQ",
-      "industry": "기타 식품 제조업",
-      "stage": "examination",
-      "status_text": "예비심사청구승인",
-      "underwriters": [
-        "미래에셋증권"
-      ],
-      "hope_price_low": null,
-      "hope_price_high": null,
-      "fixed_price": null,
-      "offered_shares": null,
-      "offering_amount": null,
-      "offering_amount_low": null,
-      "offering_amount_high": null,
-      "competition_ratio": null,
-      "review_requested_on": "2026-07-03",
-      "approved_on": "2026-11-12",
-      "filed_on": null,
-      "forecast_start": null,
-      "forecast_end": null,
-      "subscription_start": null,
-      "subscription_end": null,
-      "allocation_on": null,
-      "payment_on": null,
-      "refund_on": null,
-      "listing_on": null,
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
-      "institution_ratio": null,
-      "general_shares_min": null,
-      "general_shares_max": null,
-      "margin_ratio": null,
-      "company": {
-        "founded_on": "1997-04-01",
-        "ceo": "문동준",
-        "employees": 316,
-        "products": "샐러드류(샐러드미인), 간편식류, 젤리류(젤리블리), 기타류(소스 등)",
-        "homepage": "mdskorea.co.kr",
-        "largest_shareholder": "문동준",
-        "largest_share_ratio": 50.0,
-        "company_class": "이노비즈",
-        "address": "경기도 파주시 파주읍 가마울길 212-17"
-      },
-      "financials": [],
-      "brokers": [
-        {
-          "name": "미래에셋증권",
-          "role": null,
-          "allocated_shares": null,
-          "min_shares": null,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        }
-      ],
-      "documents": []
-    },
-    {
       "code": "A370850",
       "name": "범한메카텍",
       "market": "KOSDAQ",
@@ -224,7 +160,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -269,47 +205,6 @@
         }
       ],
       "documents": []
-    },
-    {
-      "institution_ratio": null,
-      "general_shares_min": null,
-      "general_shares_max": null,
-      "margin_ratio": null,
-      "company": null,
-      "financials": [],
-      "brokers": [],
-      "documents": [],
-      "offering_amount_low": null,
-      "offering_amount_high": null,
-      "withdrawn_on": null,
-      "code": "A0013H0",
-      "name": "이나인페이",
-      "market": "KOSDAQ",
-      "industry": "금융 지원 서비스업",
-      "stage": "examination",
-      "status_text": "예비심사청구승인",
-      "underwriters": [
-        "한국투자증권"
-      ],
-      "hope_price_low": null,
-      "hope_price_high": null,
-      "fixed_price": null,
-      "offered_shares": null,
-      "offering_amount": null,
-      "competition_ratio": null,
-      "review_requested_on": "2026-08-21",
-      "approved_on": "2026-10-15",
-      "filed_on": null,
-      "forecast_start": null,
-      "forecast_end": null,
-      "subscription_start": null,
-      "subscription_end": null,
-      "allocation_on": null,
-      "payment_on": null,
-      "refund_on": null,
-      "listing_on": null,
-      "last_seen_on": "2026-11-09",
-      "in_feed": false
     },
     {
       "institution_ratio": null,
@@ -547,7 +442,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -623,7 +518,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -687,7 +582,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -751,7 +646,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -816,7 +711,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -893,7 +788,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -969,7 +864,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -1217,7 +1112,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -1281,7 +1176,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -1346,7 +1241,7 @@
       "refund_on": "2026-11-17",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 1075000,
@@ -1546,7 +1441,7 @@
       "refund_on": null,
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": null,
@@ -1773,264 +1668,6 @@
       "in_feed": false
     },
     {
-      "code": "A0175C0",
-      "name": "유캐스트",
-      "market": "KOSDAQ",
-      "industry": "통신 및 방송 장비 제조업",
-      "stage": "forecast_done",
-      "status_text": "수요예측완료",
-      "underwriters": [
-        "유진투자증권",
-        "신영증권"
-      ],
-      "hope_price_low": 19000,
-      "hope_price_high": 23000,
-      "fixed_price": null,
-      "offered_shares": 800000,
-      "offering_amount": null,
-      "offering_amount_low": 15200000000,
-      "offering_amount_high": 18400000000,
-      "competition_ratio": null,
-      "review_requested_on": "2026-05-29",
-      "approved_on": "2026-08-20",
-      "filed_on": "2026-09-09",
-      "forecast_start": "2026-11-09",
-      "forecast_end": "2026-11-13",
-      "subscription_start": "2026-11-18",
-      "subscription_end": "2026-11-19",
-      "allocation_on": "2026-11-23",
-      "payment_on": "2026-11-23",
-      "refund_on": "2026-11-23",
-      "listing_on": null,
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
-      "institution_ratio": null,
-      "general_shares_min": 200000,
-      "general_shares_max": 240000,
-      "margin_ratio": 50.0,
-      "company": {
-        "founded_on": "2011-04-19",
-        "ceo": "김재형",
-        "employees": 45,
-        "products": "LTE 및 5G 통신장비",
-        "homepage": "www.eu-cast.com",
-        "largest_shareholder": "김재형",
-        "largest_share_ratio": 19.0,
-        "company_class": "이노비즈&벤처",
-        "address": "경기도 성남시 분당구 황새울로 262, 4층 (수내동, 성옥빌딩)"
-      },
-      "financials": [
-        {
-          "period": "2024년 4분기(연결)",
-          "sales": 4123678197,
-          "operating_profit": -1013135296,
-          "net_profit": -3287280663
-        },
-        {
-          "period": "2025년 4분기(연결)",
-          "sales": 5933614624,
-          "operating_profit": -1826074490,
-          "net_profit": -3556298785
-        },
-        {
-          "period": "2026년 2분기(연결)",
-          "sales": 2242668053,
-          "operating_profit": -1678404653,
-          "net_profit": -1923367820
-        }
-      ],
-      "brokers": [
-        {
-          "name": "유진투자증권",
-          "role": "대표",
-          "allocated_shares": 760000,
-          "min_shares": 10,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        },
-        {
-          "name": "신영증권",
-          "role": "인수",
-          "allocated_shares": 40000,
-          "min_shares": 50,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        }
-      ],
-      "documents": [
-        {
-          "title": "유캐스트 투자설명서",
-          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443&dcmNo=11622629"
-        },
-        {
-          "title": "유캐스트 증권신고서",
-          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000443"
-        }
-      ]
-    },
-    {
-      "code": "A083030",
-      "name": "에스에프씨",
-      "market": "KOSPI",
-      "industry": "기타 화학제품 제조업",
-      "stage": "forecast_done",
-      "status_text": "수요예측완료",
-      "underwriters": [
-        "미래에셋증권",
-        "한국투자증권",
-        "삼성증권"
-      ],
-      "hope_price_low": 31600,
-      "hope_price_high": 36100,
-      "fixed_price": null,
-      "offered_shares": 5000000,
-      "offering_amount": null,
-      "offering_amount_low": 158000000000,
-      "offering_amount_high": 180500000000,
-      "competition_ratio": null,
-      "review_requested_on": "2026-07-24",
-      "approved_on": "2026-10-15",
-      "filed_on": "2026-10-19",
-      "forecast_start": "2026-11-09",
-      "forecast_end": "2026-11-13",
-      "subscription_start": "2026-11-18",
-      "subscription_end": "2026-11-19",
-      "allocation_on": "2026-11-23",
-      "payment_on": "2026-11-23",
-      "refund_on": "2026-11-23",
-      "listing_on": null,
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
-      "institution_ratio": null,
-      "general_shares_min": 1250000,
-      "general_shares_max": 1500000,
-      "margin_ratio": 50.0,
-      "company": {
-        "founded_on": "2000-04-20",
-        "ceo": "김용관",
-        "employees": 350,
-        "products": "OLED 유기재료 (OLED 발광층 소재: 블루호스트, 블루도판트 등)",
-        "homepage": "www.sfc-dye.com",
-        "largest_shareholder": "HODOGAYA CHEMICAL CO., LTD.",
-        "largest_share_ratio": 53.0,
-        "company_class": "일반",
-        "address": "충청북도 청주시 청원구 오창읍 과학산업5로 89"
-      },
-      "financials": [
-        {
-          "period": "2024년 4분기(개별)",
-          "sales": 158124209837,
-          "operating_profit": 30449997730,
-          "net_profit": 30757881883
-        },
-        {
-          "period": "2025년 4분기(개별)",
-          "sales": 160791554731,
-          "operating_profit": 21665981690,
-          "net_profit": 25509269752
-        },
-        {
-          "period": "2026년 2분기(개별)",
-          "sales": 105847414271,
-          "operating_profit": 28538354863,
-          "net_profit": 19225639709
-        }
-      ],
-      "brokers": [
-        {
-          "name": "미래에셋증권",
-          "role": "대표",
-          "allocated_shares": 3750000,
-          "min_shares": 20,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        },
-        {
-          "name": "한국투자증권",
-          "role": "공동",
-          "allocated_shares": 1000000,
-          "min_shares": 20,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        },
-        {
-          "name": "삼성증권",
-          "role": "인수",
-          "allocated_shares": 250000,
-          "min_shares": 20,
-          "equal_shares": null,
-          "proportional_shares": null,
-          "total_ratio": null,
-          "proportional_ratio": null,
-          "applications": null,
-          "updated_at": null
-        }
-      ],
-      "documents": [
-        {
-          "title": "에스에프씨 IR Book",
-          "url": "https://stock.pstatic.net/stock-ipo/A083030/irBook/A083030_irBook_20261116165001.pdf"
-        },
-        {
-          "title": "에스에프씨 투자설명서",
-          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368&dcmNo=11619244"
-        },
-        {
-          "title": "에스에프씨 증권신고서",
-          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368"
-        }
-      ]
-    },
-    {
-      "code": "A471800",
-      "name": "에이엘로봇",
-      "market": "KOSDAQ",
-      "industry": "특수 목적용 기계 제조업",
-      "stage": "listing",
-      "status_text": "청약완료",
-      "underwriters": [
-        "대신증권"
-      ],
-      "hope_price_low": 15700,
-      "hope_price_high": 17600,
-      "fixed_price": 17600,
-      "offered_shares": 2400000,
-      "offering_amount": 42240000000,
-      "offering_amount_low": 37680000000,
-      "offering_amount_high": 42240000000,
-      "competition_ratio": 834.73,
-      "review_requested_on": "2026-05-22",
-      "approved_on": "2026-09-11",
-      "filed_on": "2026-09-21",
-      "forecast_start": "2026-10-28",
-      "forecast_end": "2026-11-03",
-      "subscription_start": "2026-11-06",
-      "subscription_end": "2026-11-09",
-      "allocation_on": "2026-11-11",
-      "payment_on": "2026-11-11",
-      "refund_on": "2026-11-11",
-      "listing_on": "2026-11-18",
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
       "institution_ratio": 871.74,
       "general_shares_min": 600000,
       "general_shares_max": 720000,
@@ -2089,7 +1726,38 @@
           "title": "에이엘로봇 증권신고서",
           "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000314"
         }
-      ]
+      ],
+      "offering_amount_low": 37680000000,
+      "offering_amount_high": 42240000000,
+      "withdrawn_on": null,
+      "code": "A471800",
+      "name": "에이엘로봇",
+      "market": "KOSDAQ",
+      "industry": "특수 목적용 기계 제조업",
+      "stage": "listing",
+      "status_text": "청약완료",
+      "underwriters": [
+        "대신증권"
+      ],
+      "hope_price_low": 15700,
+      "hope_price_high": 17600,
+      "fixed_price": 17600,
+      "offered_shares": 2400000,
+      "offering_amount": 42240000000,
+      "competition_ratio": 834.73,
+      "review_requested_on": "2026-05-22",
+      "approved_on": "2026-09-11",
+      "filed_on": "2026-09-21",
+      "forecast_start": "2026-10-28",
+      "forecast_end": "2026-11-03",
+      "subscription_start": "2026-11-06",
+      "subscription_end": "2026-11-09",
+      "allocation_on": "2026-11-11",
+      "payment_on": "2026-11-11",
+      "refund_on": "2026-11-11",
+      "listing_on": "2026-11-18",
+      "last_seen_on": "2026-11-17",
+      "in_feed": false
     },
     {
       "code": "A271160",
@@ -2121,7 +1789,7 @@
       "refund_on": "2026-11-13",
       "listing_on": "2026-11-20",
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": 1051.38,
       "general_shares_min": 1100000,
@@ -2218,7 +1886,7 @@
       "refund_on": "2026-11-26",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 542500,
@@ -2322,7 +1990,7 @@
       "refund_on": "2026-11-17",
       "listing_on": "2026-11-23",
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 737500,
@@ -2414,7 +2082,7 @@
       "refund_on": "2026-11-27",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 500000,
@@ -2506,7 +2174,7 @@
       "refund_on": "2026-11-27",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 1562500,
@@ -2579,7 +2247,7 @@
       "refund_on": "2026-11-17",
       "listing_on": "2026-11-24",
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": 187.1,
       "general_shares_min": 500000,
@@ -2736,6 +2404,233 @@
       "listing_on": null,
       "last_seen_on": "2026-11-11",
       "in_feed": false
+    },
+    {
+      "code": "A083030",
+      "name": "에스에프씨",
+      "market": "KOSPI",
+      "industry": "기타 화학제품 제조업",
+      "stage": "examination",
+      "status_text": "공모철회",
+      "underwriters": [
+        "미래에셋증권",
+        "한국투자증권",
+        "삼성증권"
+      ],
+      "hope_price_low": 31600,
+      "hope_price_high": 36100,
+      "fixed_price": null,
+      "offered_shares": 5000000,
+      "offering_amount": null,
+      "offering_amount_low": 158000000000,
+      "offering_amount_high": 180500000000,
+      "competition_ratio": null,
+      "review_requested_on": "2026-07-24",
+      "approved_on": "2026-10-15",
+      "filed_on": "2026-10-19",
+      "forecast_start": "2026-11-09",
+      "forecast_end": "2026-11-13",
+      "subscription_start": "2026-11-18",
+      "subscription_end": "2026-11-19",
+      "allocation_on": "2026-11-23",
+      "payment_on": "2026-11-23",
+      "refund_on": "2026-11-23",
+      "listing_on": "2026-11-27",
+      "withdrawn_on": null,
+      "last_seen_on": "2026-11-18",
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1250000,
+      "general_shares_max": 1500000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2000-04-20",
+        "ceo": "김용관",
+        "employees": 350,
+        "products": "OLED 유기재료 (OLED 발광층 소재: 블루호스트, 블루도판트 등)",
+        "homepage": "www.sfc-dye.com",
+        "largest_shareholder": "HODOGAYA CHEMICAL CO., LTD.",
+        "largest_share_ratio": 53.0,
+        "company_class": "일반",
+        "address": "충청북도 청주시 청원구 오창읍 과학산업5로 89"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 158124209837,
+          "operating_profit": 30449997730,
+          "net_profit": 30757881883
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 160791554731,
+          "operating_profit": 21665981690,
+          "net_profit": 25509269752
+        },
+        {
+          "period": "2026년 2분기(개별)",
+          "sales": 105847414271,
+          "operating_profit": 28538354863,
+          "net_profit": 19225639709
+        }
+      ],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": "대표",
+          "allocated_shares": 3750000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "한국투자증권",
+          "role": "공동",
+          "allocated_shares": 1000000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "삼성증권",
+          "role": "인수",
+          "allocated_shares": 250000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "에스에프씨 IR Book",
+          "url": "https://stock.pstatic.net/stock-ipo/A083030/irBook/A083030_irBook_20261116165001.pdf"
+        },
+        {
+          "title": "에스에프씨 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368&dcmNo=11619244"
+        },
+        {
+          "title": "에스에프씨 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261019000368"
+        }
+      ]
+    },
+    {
+      "code": "A0175C0",
+      "name": "유캐스트",
+      "market": "KOSDAQ",
+      "industry": "통신 및 방송 장비 제조업",
+      "stage": "subscription",
+      "status_text": "청약",
+      "underwriters": [
+        "유진투자증권",
+        "신영증권"
+      ],
+      "hope_price_low": 19000,
+      "hope_price_high": 23000,
+      "fixed_price": 19000,
+      "offered_shares": 800000,
+      "offering_amount": 15200000000,
+      "offering_amount_low": 15200000000,
+      "offering_amount_high": 18400000000,
+      "competition_ratio": null,
+      "review_requested_on": "2026-05-29",
+      "approved_on": "2026-08-20",
+      "filed_on": "2026-09-09",
+      "forecast_start": "2026-11-09",
+      "forecast_end": "2026-11-13",
+      "subscription_start": "2026-11-18",
+      "subscription_end": "2026-11-19",
+      "allocation_on": "2026-11-23",
+      "payment_on": "2026-11-23",
+      "refund_on": "2026-11-23",
+      "listing_on": "2026-11-30",
+      "withdrawn_on": null,
+      "last_seen_on": "2026-11-18",
+      "in_feed": true,
+      "institution_ratio": 173.42,
+      "general_shares_min": 200000,
+      "general_shares_max": 240000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2011-04-19",
+        "ceo": "김재형",
+        "employees": 45,
+        "products": "LTE 및 5G 통신장비",
+        "homepage": "www.eu-cast.com",
+        "largest_shareholder": "김재형",
+        "largest_share_ratio": 19.0,
+        "company_class": "이노비즈&벤처",
+        "address": "경기도 성남시 분당구 황새울로 262, 4층 (수내동, 성옥빌딩)"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(연결)",
+          "sales": 4123678197,
+          "operating_profit": -1013135296,
+          "net_profit": -3287280663
+        },
+        {
+          "period": "2025년 4분기(연결)",
+          "sales": 5933614624,
+          "operating_profit": -1826074490,
+          "net_profit": -3556298785
+        },
+        {
+          "period": "2026년 2분기(연결)",
+          "sales": 2242668053,
+          "operating_profit": -1678404653,
+          "net_profit": -1923367820
+        }
+      ],
+      "brokers": [
+        {
+          "name": "유진투자증권",
+          "role": "대표",
+          "allocated_shares": 760000,
+          "min_shares": 10,
+          "equal_shares": 80000,
+          "proportional_shares": 80000,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        },
+        {
+          "name": "신영증권",
+          "role": "인수",
+          "allocated_shares": 40000,
+          "min_shares": 50,
+          "equal_shares": 20000,
+          "proportional_shares": 20000,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "유캐스트 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000439"
+        },
+        {
+          "title": "유캐스트 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117000109"
+        }
+      ]
     },
     {
       "institution_ratio": null,
@@ -2918,7 +2813,7 @@
       "refund_on": "2026-12-11",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 600000,
@@ -3190,37 +3085,6 @@
       "in_feed": false
     },
     {
-      "code": "A273940",
-      "name": "데스틴파워",
-      "market": "KOSDAQ",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "stage": "examination",
-      "status_text": "증권신고서제출",
-      "underwriters": [
-        "한국투자증권"
-      ],
-      "hope_price_low": 8000,
-      "hope_price_high": 11000,
-      "fixed_price": null,
-      "offered_shares": 2200000,
-      "offering_amount": null,
-      "offering_amount_low": 17600000000,
-      "offering_amount_high": 24200000000,
-      "competition_ratio": null,
-      "review_requested_on": "2026-07-30",
-      "approved_on": "2026-10-12",
-      "filed_on": "2026-10-28",
-      "forecast_start": "2026-12-02",
-      "forecast_end": "2026-12-08",
-      "subscription_start": "2026-12-11",
-      "subscription_end": "2026-12-14",
-      "allocation_on": "2026-12-16",
-      "payment_on": "2026-12-16",
-      "refund_on": "2026-12-16",
-      "listing_on": null,
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 550000,
       "general_shares_max": 660000,
@@ -3279,6 +3143,129 @@
           "title": "데스틴파워 증권신고서",
           "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002218"
         }
+      ],
+      "offering_amount_low": 17600000000,
+      "offering_amount_high": 24200000000,
+      "withdrawn_on": null,
+      "code": "A273940",
+      "name": "데스틴파워",
+      "market": "KOSDAQ",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "stage": "examination",
+      "status_text": "증권신고서제출",
+      "underwriters": [
+        "한국투자증권"
+      ],
+      "hope_price_low": 8000,
+      "hope_price_high": 11000,
+      "fixed_price": null,
+      "offered_shares": 2200000,
+      "offering_amount": null,
+      "competition_ratio": null,
+      "review_requested_on": "2026-07-30",
+      "approved_on": "2026-10-12",
+      "filed_on": "2026-10-28",
+      "forecast_start": "2026-12-02",
+      "forecast_end": "2026-12-08",
+      "subscription_start": "2026-12-11",
+      "subscription_end": "2026-12-14",
+      "allocation_on": "2026-12-16",
+      "payment_on": "2026-12-16",
+      "refund_on": "2026-12-16",
+      "listing_on": null,
+      "last_seen_on": "2026-11-17",
+      "in_feed": false
+    },
+    {
+      "code": "A0159M0",
+      "name": "엠디에스코리아",
+      "market": "KOSDAQ",
+      "industry": "기타 식품 제조업",
+      "stage": "examination",
+      "status_text": "증권신고서제출",
+      "underwriters": [
+        "미래에셋증권"
+      ],
+      "hope_price_low": 9500,
+      "hope_price_high": 11500,
+      "fixed_price": null,
+      "offered_shares": 2250000,
+      "offering_amount": null,
+      "offering_amount_low": 21375000000,
+      "offering_amount_high": 25875000000,
+      "competition_ratio": null,
+      "review_requested_on": "2026-07-03",
+      "approved_on": "2026-11-12",
+      "filed_on": "2026-11-17",
+      "forecast_start": "2026-12-03",
+      "forecast_end": "2026-12-09",
+      "subscription_start": "2026-12-14",
+      "subscription_end": "2026-12-15",
+      "allocation_on": "2026-12-17",
+      "payment_on": "2026-12-17",
+      "refund_on": "2026-12-17",
+      "listing_on": null,
+      "withdrawn_on": null,
+      "last_seen_on": "2026-11-18",
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 562500,
+      "general_shares_max": 675000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "1997-04-01",
+        "ceo": "문동준",
+        "employees": 316,
+        "products": "샐러드류(샐러드미인), 간편식류, 젤리류(젤리블리), 기타류(소스 등)",
+        "homepage": "mdskorea.co.kr",
+        "largest_shareholder": "문동준",
+        "largest_share_ratio": 50.0,
+        "company_class": "이노비즈",
+        "address": "경기도 파주시 파주읍 가마울길 212-17"
+      },
+      "financials": [
+        {
+          "period": "2024년 4분기(개별)",
+          "sales": 94119734537,
+          "operating_profit": 7887570856,
+          "net_profit": 6559269764
+        },
+        {
+          "period": "2025년 4분기(개별)",
+          "sales": 97972050448,
+          "operating_profit": 7573747914,
+          "net_profit": 6512309715
+        },
+        {
+          "period": "2026년 3분기(개별)",
+          "sales": 75824220141,
+          "operating_profit": 5617327513,
+          "net_profit": 4969972364
+        }
+      ],
+      "brokers": [
+        {
+          "name": "미래에셋증권",
+          "role": "대표",
+          "allocated_shares": 2250000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "엠디에스코리아 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117000221&dcmNo=11663693"
+        },
+        {
+          "title": "엠디에스코리아 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117000221"
+        }
       ]
     },
     {
@@ -3312,7 +3299,7 @@
       "refund_on": "2026-12-17",
       "listing_on": null,
       "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
+      "last_seen_on": "2026-11-18",
       "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 619500,
@@ -3387,37 +3374,6 @@
       ]
     },
     {
-      "code": "A103060",
-      "name": "케이티이",
-      "market": "KOSDAQ",
-      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
-      "stage": "examination",
-      "status_text": "증권신고서제출",
-      "underwriters": [
-        "NH투자증권"
-      ],
-      "hope_price_low": 19000,
-      "hope_price_high": 23000,
-      "fixed_price": null,
-      "offered_shares": 2816000,
-      "offering_amount": null,
-      "offering_amount_low": 53504000000,
-      "offering_amount_high": 64768000000,
-      "competition_ratio": null,
-      "review_requested_on": "2026-07-31",
-      "approved_on": "2026-10-08",
-      "filed_on": "2026-10-28",
-      "forecast_start": "2026-12-02",
-      "forecast_end": "2026-12-08",
-      "subscription_start": "2026-12-14",
-      "subscription_end": "2026-12-15",
-      "allocation_on": "2026-12-17",
-      "payment_on": "2026-12-17",
-      "refund_on": "2026-12-17",
-      "listing_on": null,
-      "withdrawn_on": null,
-      "last_seen_on": "2026-11-17",
-      "in_feed": true,
       "institution_ratio": null,
       "general_shares_min": 704000,
       "general_shares_max": 844800,
@@ -3475,6 +3431,117 @@
         {
           "title": "케이티이 증권신고서",
           "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000478"
+        }
+      ],
+      "offering_amount_low": 53504000000,
+      "offering_amount_high": 64768000000,
+      "withdrawn_on": null,
+      "code": "A103060",
+      "name": "케이티이",
+      "market": "KOSDAQ",
+      "industry": "전동기, 발전기 및 전기 변환 · 공급 · 제어 장치 제조업",
+      "stage": "examination",
+      "status_text": "증권신고서제출",
+      "underwriters": [
+        "NH투자증권"
+      ],
+      "hope_price_low": 19000,
+      "hope_price_high": 23000,
+      "fixed_price": null,
+      "offered_shares": 2816000,
+      "offering_amount": null,
+      "competition_ratio": null,
+      "review_requested_on": "2026-07-31",
+      "approved_on": "2026-10-08",
+      "filed_on": "2026-10-28",
+      "forecast_start": "2026-12-02",
+      "forecast_end": "2026-12-08",
+      "subscription_start": "2026-12-14",
+      "subscription_end": "2026-12-15",
+      "allocation_on": "2026-12-17",
+      "payment_on": "2026-12-17",
+      "refund_on": "2026-12-17",
+      "listing_on": null,
+      "last_seen_on": "2026-11-17",
+      "in_feed": false
+    },
+    {
+      "code": "A0013H0",
+      "name": "이나인페이",
+      "market": "KOSDAQ",
+      "industry": "금융 지원 서비스업",
+      "stage": "examination",
+      "status_text": "증권신고서제출",
+      "underwriters": [
+        "한국투자증권"
+      ],
+      "hope_price_low": 7500,
+      "hope_price_high": 10500,
+      "fixed_price": null,
+      "offered_shares": 6400000,
+      "offering_amount": null,
+      "offering_amount_low": 48000000000,
+      "offering_amount_high": 67200000000,
+      "competition_ratio": null,
+      "review_requested_on": "2026-08-21",
+      "approved_on": "2026-10-15",
+      "filed_on": "2026-11-17",
+      "forecast_start": "2026-12-07",
+      "forecast_end": "2026-12-11",
+      "subscription_start": "2026-12-16",
+      "subscription_end": "2026-12-17",
+      "allocation_on": "2026-12-21",
+      "payment_on": "2026-12-21",
+      "refund_on": "2026-12-21",
+      "listing_on": null,
+      "withdrawn_on": null,
+      "last_seen_on": "2026-11-18",
+      "in_feed": true,
+      "institution_ratio": null,
+      "general_shares_min": 1600000,
+      "general_shares_max": 1920000,
+      "margin_ratio": 50.0,
+      "company": {
+        "founded_on": "2007-08-01",
+        "ceo": "전혁구",
+        "employees": 113,
+        "products": "디지털송금서비스, 편의서비스, 선불카드서비스",
+        "homepage": "e9pay.co.kr",
+        "largest_shareholder": "이종민",
+        "largest_share_ratio": 68.0,
+        "company_class": "벤처",
+        "address": "서울특별시 관악구 남부순환로 1793 백광빌딩, 803호"
+      },
+      "financials": [
+        {
+          "period": "2026년 3분기(연결)",
+          "sales": 56313164350,
+          "operating_profit": 15468279868,
+          "net_profit": 12017949387
+        }
+      ],
+      "brokers": [
+        {
+          "name": "한국투자증권",
+          "role": "대표",
+          "allocated_shares": 6400000,
+          "min_shares": 20,
+          "equal_shares": null,
+          "proportional_shares": null,
+          "total_ratio": null,
+          "proportional_ratio": null,
+          "applications": null,
+          "updated_at": null
+        }
+      ],
+      "documents": [
+        {
+          "title": "이나인페이 투자설명서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117000140&dcmNo=11663375"
+        },
+        {
+          "title": "이나인페이 증권신고서",
+          "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261117000140"
         }
       ]
     }
