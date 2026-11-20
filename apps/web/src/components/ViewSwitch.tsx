@@ -1,6 +1,7 @@
 import { motion } from 'motion/react'
+import type { View } from '../domain/urlState'
 
-export type View = 'calendar' | 'list'
+export type { View }
 
 const VIEWS: readonly { id: View; label: string }[] = [
   { id: 'calendar', label: '캘린더' },

@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { useEffect, useRef } from 'react'
 import { TABS, type TabId } from '../domain/tabs'
 
 interface Props {
@@ -8,6 +9,13 @@ interface Props {
 }
 
 export function StageTabs({ active, counts, onChange }: Props) {
+  const activeRef = useRef<HTMLButtonElement>(null)
+
+  // A shared link can open on a tab that starts off-screen in the horizontal scroller.
+  useEffect(() => {
+    activeRef.current?.scrollIntoView({ block: 'nearest', inline: 'nearest' })
+  }, [active])
+
   return (
     <nav className="-mx-4 flex gap-1 overflow-x-auto px-4 [scrollbar-width:none]" role="tablist">
       {TABS.map((tab) => {
@@ -15,6 +23,7 @@ export function StageTabs({ active, counts, onChange }: Props) {
         return (
           <button
             key={tab.id}
+            ref={selected ? activeRef : undefined}
             role="tab"
             aria-selected={selected}
             onClick={() => onChange(tab.id)}

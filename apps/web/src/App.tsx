@@ -8,22 +8,18 @@ import { SearchBar } from './components/SearchBar'
 import { SortSheet } from './components/SortSheet'
 import { StageTabs } from './components/StageTabs'
 import { UpdatedBadge } from './components/UpdatedBadge'
-import { ViewSwitch, type View } from './components/ViewSwitch'
+import { ViewSwitch } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
 import { useDataset } from './data/useDataset'
 import { useFavorites } from './data/useFavorites'
+import { useUrlState } from './data/useUrlState'
 import { eventsOf } from './domain/events'
-import {
-  activeFilterCount,
-  EMPTY_FILTER,
-  matchesFilter,
-  underwriterOptions,
-  type IpoFilter,
-} from './domain/filter'
+import { activeFilterCount, EMPTY_FILTER, matchesFilter, underwriterOptions } from './domain/filter'
 import { todayKst, type Dataset, type Ipo } from './domain/ipo'
 import { sortIpos, sortLabel, type SortKey } from './domain/sort'
 import { summarize } from './domain/summary'
 import { firstNonEmptyTab, groupByTab, tabOf, TABS, type TabId } from './domain/tabs'
+import type { UrlState } from './domain/urlState'
 
 export default function App() {
   const state = useDataset()
@@ -47,14 +43,21 @@ export default function App() {
 
 function Board({ dataset }: { dataset: Dataset }) {
   const today = todayKst()
-  const [filter, setFilter] = useState<IpoFilter>(EMPTY_FILTER)
+  const url = useUrlState()
+  const ui = url.state
+  const { filter, favoritesOnly } = ui
   const [filterOpen, setFilterOpen] = useState(false)
-  const [view, setView] = useState<View>('calendar')
-  const [selected, setSelected] = useState<Ipo | null>(null)
   const [favorites, toggleFavorite] = useFavorites()
-  const [favoritesOnly, setFavoritesOnly] = useState(false)
-  const close = useCallback(() => setSelected(null), [])
   const closeFilter = useCallback(() => setFilterOpen(false), [])
+
+  const update = (patch: Partial<UrlState>) => url.replace({ ...ui, ...patch })
+  const selected = useMemo(
+    () => (ui.ipo === null ? null : (dataset.ipos.find((ipo) => ipo.code === ui.ipo) ?? null)),
+    [dataset, ui.ipo],
+  )
+  const open = (ipo: Ipo) => url.push({ ...ui, ipo: ipo.code })
+  const { pop } = url
+  const close = useCallback(() => pop({ ...ui, ipo: null }), [pop, ui])
 
   // The weekly summary stays unfiltered; search and filters narrow the calendar and list.
   const summary = useMemo(() => summarize(eventsOf(dataset.ipos, today), today), [dataset, today])
@@ -78,16 +81,16 @@ function Board({ dataset }: { dataset: Dataset }) {
         <WeekSummary summary={summary} />
       </div>
       <div className="mt-5">
-        <ViewSwitch view={view} onChange={setView} />
+        <ViewSwitch view={ui.view} onChange={(view) => update({ view })} />
       </div>
       <div className="mt-3">
         <SearchBar
           query={filter.query}
           filterCount={filterCount}
           favoritesOnly={favoritesOnly}
-          onQueryChange={(query) => setFilter({ ...filter, query })}
+          onQueryChange={(query) => update({ filter: { ...filter, query } })}
           onOpenFilter={() => setFilterOpen(true)}
-          onToggleFavoritesOnly={() => setFavoritesOnly(!favoritesOnly)}
+          onToggleFavoritesOnly={() => update({ favoritesOnly: !favoritesOnly })}
         />
         {(filter.query !== '' || filterCount > 0 || favoritesOnly) && (
           <div className="mt-2 flex items-center justify-between px-1 text-sm">
@@ -95,26 +98,28 @@ function Board({ dataset }: { dataset: Dataset }) {
               <b className="text-brand-600 tabular-nums">{visible.length}</b>개 종목
             </span>
             <button
-              onClick={() => {
-                setFilter(EMPTY_FILTER)
-                setFavoritesOnly(false)
-              }}
-              className="text-gray-500 underline-offset-2 active:underline">
+              onClick={() => update({ filter: EMPTY_FILTER, favoritesOnly: false })}
+              className="text-gray-500 underline-offset-2 active:underline"
+            >
               전체 초기화
             </button>
           </div>
         )}
       </div>
       <div className="mt-3">
-        {view === 'calendar' ? (
-          <MonthCalendar events={events} today={today} onSelect={setSelected} />
+        {ui.view === 'calendar' ? (
+          <MonthCalendar events={events} today={today} onSelect={open} />
         ) : (
           <StageList
             ipos={visible}
             today={today}
+            tab={ui.tab}
+            sort={ui.sort}
             favorites={favorites}
             emptyText={favoritesOnly && favorites.size === 0 ? '별을 눌러 관심 종목을 추가해 보세요' : undefined}
-            onSelect={setSelected}
+            onTabChange={(tab) => update({ tab })}
+            onSortChange={(sort) => update({ sort })}
+            onSelect={open}
             onToggleFavorite={toggleFavorite}
           />
         )}
@@ -131,7 +136,7 @@ function Board({ dataset }: { dataset: Dataset }) {
         filter={filter}
         underwriters={underwriters}
         resultCount={visible.length}
-        onChange={setFilter}
+        onChange={(next) => update({ filter: next })}
         onClose={closeFilter}
       />
     </>
@@ -141,20 +146,25 @@ function Board({ dataset }: { dataset: Dataset }) {
 interface StageListProps {
   ipos: readonly Ipo[]
   today: string
+  /** null picks the first tab that has items. */
+  tab: TabId | null
+  sort: SortKey
   favorites: ReadonlySet<string>
   emptyText?: string
+  onTabChange: (tab: TabId) => void
+  onSortChange: (sort: SortKey) => void
   onSelect: (ipo: Ipo) => void
   onToggleFavorite: (code: string) => void
 }
 
-function StageList({ ipos, today, favorites, emptyText, onSelect, onToggleFavorite }: StageListProps) {
+function StageList(props: StageListProps) {
+  const { ipos, today, sort, favorites, emptyText, onSelect, onToggleFavorite } = props
   const groups = useMemo(() => groupByTab(ipos, today), [ipos, today])
   const counts = useMemo(
     () => Object.fromEntries(TABS.map((t) => [t.id, groups[t.id].length])) as Record<TabId, number>,
     [groups],
   )
-  const [tab, setTab] = useState<TabId>(() => firstNonEmptyTab(groups))
-  const [sort, setSort] = useState<SortKey>('schedule')
+  const tab = props.tab ?? firstNonEmptyTab(groups)
   const [sortOpen, setSortOpen] = useState(false)
   const closeSort = useCallback(() => setSortOpen(false), [])
   const items = useMemo(() => sortIpos(groups[tab], sort), [groups, tab, sort])
@@ -162,7 +172,7 @@ function StageList({ ipos, today, favorites, emptyText, onSelect, onToggleFavori
   return (
     <>
       <div className="sticky top-0 z-10 -mx-4 bg-gray-50/90 px-4 py-2 backdrop-blur">
-        <StageTabs active={tab} counts={counts} onChange={setTab} />
+        <StageTabs active={tab} counts={counts} onChange={props.onTabChange} />
       </div>
       <div className="mt-1 flex items-center justify-between px-1">
         <span className="text-sm text-gray-500 tabular-nums">{items.length}개</span>
@@ -205,7 +215,7 @@ function StageList({ ipos, today, favorites, emptyText, onSelect, onToggleFavori
           ))}
         </motion.ul>
       </AnimatePresence>
-      <SortSheet open={sortOpen} value={sort} onChange={setSort} onClose={closeSort} />
+      <SortSheet open={sortOpen} value={sort} onChange={props.onSortChange} onClose={closeSort} />
     </>
   )
 }
