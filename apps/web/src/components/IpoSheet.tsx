@@ -17,25 +17,48 @@ import type { Broker, Company, Financial, Ipo, IpoDocument } from '../domain/ipo
 import { scheduleOf, stepState, type StepState } from '../domain/schedule'
 import { expectedEqualShares, formatExpectedShares } from '../domain/broker'
 import { BottomSheet } from './BottomSheet'
+import { FavoriteButton } from './FavoriteButton'
 
 interface Props {
   ipo: Ipo | null
   today: string
+  favorites: ReadonlySet<string>
+  onToggleFavorite: (code: string) => void
   onClose: () => void
 }
 
-export function IpoSheet({ ipo, today, onClose }: Props) {
+export function IpoSheet({ ipo, today, favorites, onToggleFavorite, onClose }: Props) {
   return (
     <BottomSheet open={ipo !== null} label={ipo?.name ?? ''} onClose={onClose}>
-      {ipo && <SheetBody ipo={ipo} today={today} />}
+      {ipo && (
+        <SheetBody
+          ipo={ipo}
+          today={today}
+          favorite={favorites.has(ipo.code)}
+          onToggleFavorite={() => onToggleFavorite(ipo.code)}
+        />
+      )}
     </BottomSheet>
   )
 }
 
-function SheetBody({ ipo, today }: { ipo: Ipo; today: string }) {
+interface BodyProps {
+  ipo: Ipo
+  today: string
+  favorite: boolean
+  onToggleFavorite: () => void
+}
+
+function SheetBody({ ipo, today, favorite, onToggleFavorite }: BodyProps) {
   return (
     <>
-      <header>
+      <header className="relative pr-10">
+        <FavoriteButton
+          active={favorite}
+          name={ipo.name}
+          onToggle={onToggleFavorite}
+          className="absolute -top-2 -right-2"
+        />
         <p className="text-xs text-gray-400">
           {[formatMarket(ipo.market), ipo.status_text].filter(Boolean).join(' · ')}
         </p>

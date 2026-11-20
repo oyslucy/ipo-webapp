@@ -7,11 +7,14 @@ import {
   formatWon,
 } from '../domain/format'
 import { isWithdrawn, type TabId } from '../domain/tabs'
+import { FavoriteButton } from './FavoriteButton'
 
 interface Props {
   ipo: Ipo
   tab: TabId
+  favorite: boolean
   onSelect: (ipo: Ipo) => void
+  onToggleFavorite: (code: string) => void
 }
 
 interface Fact {
@@ -58,37 +61,44 @@ function factsFor(ipo: Ipo, tab: TabId): Fact[] {
   }
 }
 
-export function IpoCard({ ipo, tab, onSelect }: Props) {
+export function IpoCard({ ipo, tab, favorite, onSelect, onToggleFavorite }: Props) {
   const withdrawn = isWithdrawn(ipo)
+  // The star sits beside the card button rather than inside it; nested buttons are invalid.
   return (
-    <button
-      onClick={() => onSelect(ipo)}
-      className={`w-full rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm transition active:scale-[0.99] active:bg-gray-50 ${
-        withdrawn ? 'opacity-50' : ''
-      }`}
-    >
-      <div className="flex items-center gap-2">
-        <h3 className="truncate text-base font-semibold">{ipo.name}</h3>
-        {ipo.market && (
-          <span className="shrink-0 rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
-            {ipo.market}
-          </span>
-        )}
-        {withdrawn && (
-          <span className="shrink-0 rounded bg-red-50 px-1.5 py-0.5 text-xs text-red-500">
-            철회
-          </span>
-        )}
-      </div>
-      {ipo.industry && <p className="mt-0.5 truncate text-xs text-gray-400">{ipo.industry}</p>}
-      <dl className="mt-3 space-y-1 text-sm">
-        {factsFor(ipo, tab).map((fact) => (
-          <div key={fact.label} className="flex justify-between gap-4">
-            <dt className="shrink-0 text-gray-500">{fact.label}</dt>
-            <dd className="truncate font-medium tabular-nums">{fact.value}</dd>
-          </div>
-        ))}
-      </dl>
-    </button>
+    <div className={`relative ${withdrawn ? 'opacity-50' : ''}`}>
+      <button
+        onClick={() => onSelect(ipo)}
+        className="w-full rounded-2xl border border-gray-100 bg-white p-4 text-left shadow-sm transition active:scale-[0.99] active:bg-gray-50"
+      >
+        <div className="flex items-center gap-2 pr-8">
+          <h3 className="truncate text-base font-semibold">{ipo.name}</h3>
+          {ipo.market && (
+            <span className="shrink-0 rounded bg-gray-100 px-1.5 py-0.5 text-xs text-gray-500">
+              {ipo.market}
+            </span>
+          )}
+          {withdrawn && (
+            <span className="shrink-0 rounded bg-red-50 px-1.5 py-0.5 text-xs text-red-500">
+              철회
+            </span>
+          )}
+        </div>
+        {ipo.industry && <p className="mt-0.5 truncate pr-8 text-xs text-gray-400">{ipo.industry}</p>}
+        <dl className="mt-3 space-y-1 text-sm">
+          {factsFor(ipo, tab).map((fact) => (
+            <div key={fact.label} className="flex justify-between gap-4">
+              <dt className="shrink-0 text-gray-500">{fact.label}</dt>
+              <dd className="truncate font-medium tabular-nums">{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </button>
+      <FavoriteButton
+        active={favorite}
+        name={ipo.name}
+        onToggle={() => onToggleFavorite(ipo.code)}
+        className="absolute top-2 right-2"
+      />
+    </div>
   )
 }

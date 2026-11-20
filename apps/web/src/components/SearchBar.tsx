@@ -1,11 +1,22 @@
+import { StarIcon } from './FavoriteButton'
+
 interface Props {
   query: string
   filterCount: number
+  favoritesOnly: boolean
   onQueryChange: (query: string) => void
   onOpenFilter: () => void
+  onToggleFavoritesOnly: () => void
 }
 
-export function SearchBar({ query, filterCount, onQueryChange, onOpenFilter }: Props) {
+export function SearchBar({
+  query,
+  filterCount,
+  favoritesOnly,
+  onQueryChange,
+  onOpenFilter,
+  onToggleFavoritesOnly,
+}: Props) {
   return (
     <div className="flex gap-2">
       <label className="flex min-w-0 flex-1 items-center gap-2 rounded-2xl bg-white px-3.5 shadow-sm ring-1 ring-gray-100 focus-within:ring-2 focus-within:ring-brand-500">
@@ -33,6 +44,16 @@ export function SearchBar({ query, filterCount, onQueryChange, onOpenFilter }: P
           </button>
         )}
       </label>
+      <button
+        onClick={onToggleFavoritesOnly}
+        aria-pressed={favoritesOnly}
+        aria-label="관심 종목만 보기"
+        className={`flex shrink-0 items-center justify-center rounded-2xl px-3 shadow-sm ring-1 ${
+          favoritesOnly ? 'bg-amber-50 ring-amber-300' : 'bg-white ring-gray-100'
+        }`}
+      >
+        <StarIcon filled={favoritesOnly} />
+      </button>
       <button
         onClick={onOpenFilter}
         aria-label={`필터${filterCount > 0 ? ` ${filterCount}개 적용됨` : ''}`}

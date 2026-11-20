@@ -11,6 +11,7 @@ import { UpdatedBadge } from './components/UpdatedBadge'
 import { ViewSwitch, type View } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
 import { useDataset } from './data/useDataset'
+import { useFavorites } from './data/useFavorites'
 import { eventsOf } from './domain/events'
 import {
   activeFilterCount,
@@ -50,6 +51,8 @@ function Board({ dataset }: { dataset: Dataset }) {
   const [filterOpen, setFilterOpen] = useState(false)
   const [view, setView] = useState<View>('calendar')
   const [selected, setSelected] = useState<Ipo | null>(null)
+  const [favorites, toggleFavorite] = useFavorites()
+  const [favoritesOnly, setFavoritesOnly] = useState(false)
   const close = useCallback(() => setSelected(null), [])
   const closeFilter = useCallback(() => setFilterOpen(false), [])
 
@@ -57,8 +60,14 @@ function Board({ dataset }: { dataset: Dataset }) {
   const summary = useMemo(() => summarize(eventsOf(dataset.ipos, today), today), [dataset, today])
   const underwriters = useMemo(() => underwriterOptions(dataset.ipos), [dataset])
   const visible = useMemo(
-    () => dataset.ipos.filter((ipo) => tabOf(ipo, today) !== null && matchesFilter(ipo, filter)),
-    [dataset, filter, today],
+    () =>
+      dataset.ipos.filter(
+        (ipo) =>
+          tabOf(ipo, today) !== null &&
+          (!favoritesOnly || favorites.has(ipo.code)) &&
+          matchesFilter(ipo, filter),
+      ),
+    [dataset, filter, today, favoritesOnly, favorites],
   )
   const events = useMemo(() => eventsOf(visible, today), [visible, today])
   const filterCount = activeFilterCount(filter)
@@ -75,15 +84,22 @@ function Board({ dataset }: { dataset: Dataset }) {
         <SearchBar
           query={filter.query}
           filterCount={filterCount}
+          favoritesOnly={favoritesOnly}
           onQueryChange={(query) => setFilter({ ...filter, query })}
           onOpenFilter={() => setFilterOpen(true)}
+          onToggleFavoritesOnly={() => setFavoritesOnly(!favoritesOnly)}
         />
-        {(filter.query !== '' || filterCount > 0) && (
+        {(filter.query !== '' || filterCount > 0 || favoritesOnly) && (
           <div className="mt-2 flex items-center justify-between px-1 text-sm">
             <span className="text-gray-500">
               <b className="text-brand-600 tabular-nums">{visible.length}</b>개 종목
             </span>
-            <button onClick={() => setFilter(EMPTY_FILTER)} className="text-gray-500 underline-offset-2 active:underline">
+            <button
+              onClick={() => {
+                setFilter(EMPTY_FILTER)
+                setFavoritesOnly(false)
+              }}
+              className="text-gray-500 underline-offset-2 active:underline">
               전체 초기화
             </button>
           </div>
@@ -93,10 +109,23 @@ function Board({ dataset }: { dataset: Dataset }) {
         {view === 'calendar' ? (
           <MonthCalendar events={events} today={today} onSelect={setSelected} />
         ) : (
-          <StageList ipos={visible} today={today} onSelect={setSelected} />
+          <StageList
+            ipos={visible}
+            today={today}
+            favorites={favorites}
+            emptyText={favoritesOnly && favorites.size === 0 ? '별을 눌러 관심 종목을 추가해 보세요' : undefined}
+            onSelect={setSelected}
+            onToggleFavorite={toggleFavorite}
+          />
         )}
       </div>
-      <IpoSheet ipo={selected} today={today} onClose={close} />
+      <IpoSheet
+        ipo={selected}
+        today={today}
+        favorites={favorites}
+        onToggleFavorite={toggleFavorite}
+        onClose={close}
+      />
       <FilterSheet
         open={filterOpen}
         filter={filter}
@@ -112,10 +141,13 @@ function Board({ dataset }: { dataset: Dataset }) {
 interface StageListProps {
   ipos: readonly Ipo[]
   today: string
+  favorites: ReadonlySet<string>
+  emptyText?: string
   onSelect: (ipo: Ipo) => void
+  onToggleFavorite: (code: string) => void
 }
 
-function StageList({ ipos, today, onSelect }: StageListProps) {
+function StageList({ ipos, today, favorites, emptyText, onSelect, onToggleFavorite }: StageListProps) {
   const groups = useMemo(() => groupByTab(ipos, today), [ipos, today])
   const counts = useMemo(
     () => Object.fromEntries(TABS.map((t) => [t.id, groups[t.id].length])) as Record<TabId, number>,
@@ -156,11 +188,19 @@ function StageList({ ipos, today, onSelect }: StageListProps) {
           transition={{ duration: 0.15 }}
         >
           {items.length === 0 && (
-            <li className="py-16 text-center text-sm text-gray-400">조건에 맞는 종목이 없어요</li>
+            <li className="py-16 text-center text-sm text-gray-400">
+              {emptyText ?? '조건에 맞는 종목이 없어요'}
+            </li>
           )}
           {items.map((ipo) => (
             <li key={ipo.code}>
-              <IpoCard ipo={ipo} tab={tab} onSelect={onSelect} />
+              <IpoCard
+                ipo={ipo}
+                tab={tab}
+                favorite={favorites.has(ipo.code)}
+                onSelect={onSelect}
+                onToggleFavorite={onToggleFavorite}
+              />
             </li>
           ))}
         </motion.ul>
