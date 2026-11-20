@@ -1,4 +1,5 @@
 import type { Ipo } from './ipo'
+import { openReturn } from './performance'
 
 export type SortKey =
   | 'schedule'
@@ -9,6 +10,7 @@ export type SortKey =
   | 'price_desc'
   | 'price_asc'
   | 'amount_desc'
+  | 'open_return_desc'
 
 export const SORT_OPTIONS: readonly { key: SortKey; label: string }[] = [
   { key: 'schedule', label: '일정순' },
@@ -19,6 +21,7 @@ export const SORT_OPTIONS: readonly { key: SortKey; label: string }[] = [
   { key: 'price_desc', label: '공모가 높은순' },
   { key: 'price_asc', label: '공모가 낮은순' },
   { key: 'amount_desc', label: '공모금액 큰순' },
+  { key: 'open_return_desc', label: '시초가 수익률 높은순' },
 ]
 
 export function sortLabel(key: SortKey): string {
@@ -38,6 +41,7 @@ const METRIC: Record<Exclude<SortKey, 'schedule'>, [(ipo: Ipo) => number | null,
   price_desc: [priceOf, -1],
   price_asc: [priceOf, 1],
   amount_desc: [(ipo) => ipo.offering_amount, -1],
+  open_return_desc: [openReturn, -1],
 }
 
 /** Stable sort; records without the value always go last whichever direction. */

@@ -44,6 +44,7 @@ const base: Ipo = {
   withdrawn_on: null,
   last_seen_on: '2026-11-09',
   in_feed: true,
+  performance: null,
   institution_ratio: null,
   general_shares_min: null,
   general_shares_max: null,

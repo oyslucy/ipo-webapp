@@ -6,8 +6,10 @@ import {
   formatRatio,
   formatWon,
 } from '../domain/format'
+import { formatPriceWithReturn, returnRate, toneOf, type Tone } from '../domain/performance'
 import { isWithdrawn, type TabId } from '../domain/tabs'
 import { FavoriteButton } from './FavoriteButton'
+import { TONE_TEXT } from './toneStyle'
 
 interface Props {
   ipo: Ipo
@@ -20,6 +22,20 @@ interface Props {
 interface Fact {
   label: string
   value: string
+  tone?: Tone
+}
+
+function priceFact(label: string, price: number | null, offer: number | null): Fact {
+  return { label, value: formatPriceWithReturn(price, offer), tone: toneOf(returnRate(price, offer)) }
+}
+
+function performanceFacts(ipo: Ipo): Fact[] {
+  const { performance } = ipo
+  if (performance === null) return []
+  return [
+    priceFact('시초가', performance.open, ipo.fixed_price),
+    priceFact('최근가', performance.latest_close, ipo.fixed_price),
+  ]
 }
 
 function factsFor(ipo: Ipo, tab: TabId): Fact[] {
@@ -49,6 +65,7 @@ function factsFor(ipo: Ipo, tab: TabId): Fact[] {
       return [
         { label: '상장일', value: formatDate(ipo.listing_on) },
         price,
+        ...performanceFacts(ipo),
         institution,
         { label: '청약경쟁률', value: formatRatio(ipo.competition_ratio) },
         underwriter,
@@ -88,7 +105,9 @@ export function IpoCard({ ipo, tab, favorite, onSelect, onToggleFavorite }: Prop
           {factsFor(ipo, tab).map((fact) => (
             <div key={fact.label} className="flex justify-between gap-4">
               <dt className="shrink-0 text-gray-500">{fact.label}</dt>
-              <dd className="truncate font-medium tabular-nums">{fact.value}</dd>
+              <dd className={`truncate font-medium tabular-nums ${TONE_TEXT[fact.tone ?? 'flat']}`}>
+                {fact.value}
+              </dd>
             </div>
           ))}
         </dl>

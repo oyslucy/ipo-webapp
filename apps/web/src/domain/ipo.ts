@@ -43,6 +43,15 @@ export interface IpoDocument {
   url: string
 }
 
+/** Trading after listing; prices in won. */
+export interface Performance {
+  open: number | null
+  high: number | null
+  close: number | null
+  latest_close: number | null
+  latest_on: string
+}
+
 export interface Ipo {
   code: string
   name: string
@@ -73,6 +82,7 @@ export interface Ipo {
   withdrawn_on: string | null
   last_seen_on: string
   in_feed: boolean
+  performance: Performance | null
   /** 기관 수요예측 경쟁률 */
   institution_ratio: number | null
   general_shares_min: number | null

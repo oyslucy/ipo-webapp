@@ -13,11 +13,13 @@ import {
   formatShareRange,
   formatWon,
 } from '../domain/format'
-import type { Broker, Company, Financial, Ipo, IpoDocument } from '../domain/ipo'
+import type { Broker, Company, Financial, Ipo, IpoDocument, Performance } from '../domain/ipo'
+import { formatReturn, returnRate, toneOf } from '../domain/performance'
 import { scheduleOf, stepState, type StepState } from '../domain/schedule'
 import { expectedEqualShares, formatExpectedShares } from '../domain/broker'
 import { BottomSheet } from './BottomSheet'
 import { FavoriteButton } from './FavoriteButton'
+import { TONE_TEXT } from './toneStyle'
 
 interface Props {
   ipo: Ipo | null
@@ -67,6 +69,7 @@ function SheetBody({ ipo, today, favorite, onToggleFavorite }: BodyProps) {
       </header>
 
       <RatioTiles ipo={ipo} />
+      {ipo.performance && <PriceAfterListing performance={ipo.performance} offer={ipo.fixed_price} />}
       <OfferingInfo ipo={ipo} />
       {ipo.brokers.length > 0 && <Brokers brokers={ipo.brokers} />}
       <Schedule ipo={ipo} today={today} />
@@ -114,6 +117,33 @@ function RatioTiles({ ipo }: { ipo: Ipo }) {
         {subscription.note && <p className="mt-0.5 text-xs text-brand-700/70">{subscription.note}</p>}
       </div>
     </div>
+  )
+}
+
+function PriceAfterListing({ performance, offer }: { performance: Performance; offer: number | null }) {
+  const tiles: [string, number | null][] = [
+    ['시초가', performance.open],
+    ['상장일 고가', performance.high],
+    ['상장일 종가', performance.close],
+    ['최근가', performance.latest_close],
+  ]
+  return (
+    <Section title="상장 후 주가" note={`공모가 대비 · ${formatDate(performance.latest_on)} 기준`}>
+      <dl className="grid grid-cols-2 gap-x-4 gap-y-3 rounded-2xl bg-gray-50 p-4 text-sm">
+        {tiles.map(([label, price]) => {
+          const rate = returnRate(price, offer)
+          return (
+            <div key={label} className="min-w-0">
+              <dt className="text-xs text-gray-500">{label}</dt>
+              <dd className="mt-0.5 font-medium tabular-nums">{formatWon(price)}</dd>
+              <dd className={`text-xs font-semibold tabular-nums ${TONE_TEXT[toneOf(rate)] || 'text-gray-400'}`}>
+                {formatReturn(rate)}
+              </dd>
+            </div>
+          )
+        })}
+      </dl>
+    </Section>
   )
 }
 

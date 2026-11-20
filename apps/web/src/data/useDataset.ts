@@ -6,6 +6,11 @@ type State =
   | { status: 'error'; message: string }
   | { status: 'ready'; dataset: Dataset }
 
+/** Data published before a field existed lacks it; fill in the empty value. */
+function withDefaults(dataset: Dataset): Dataset {
+  return { ...dataset, ipos: dataset.ipos.map((ipo) => ({ ...ipo, performance: ipo.performance ?? null })) }
+}
+
 export function useDataset(): State {
   const [state, setState] = useState<State>({ status: 'loading' })
 
@@ -19,7 +24,7 @@ export function useDataset(): State {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.json() as Promise<Dataset>
       })
-      .then((dataset) => setState({ status: 'ready', dataset }))
+      .then((dataset) => setState({ status: 'ready', dataset: withDefaults(dataset) }))
       .catch((error: unknown) => {
         if (controller.signal.aborted) return
         setState({ status: 'error', message: error instanceof Error ? error.message : String(error) })

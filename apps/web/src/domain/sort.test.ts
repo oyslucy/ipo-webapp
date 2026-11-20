@@ -27,6 +27,15 @@ describe('sortIpos', () => {
   it('falls back to the hoped-for price when no fixed price', () => {
     expect(codes(sortIpos(list, 'price_desc'))).toEqual(['B', 'C', 'A'])
   })
+  it('sorts by open return against the offer price', () => {
+    const perf = (open: number) => ({ open, high: null, close: null, latest_close: null, latest_on: '2026-11-12' })
+    const listed = [
+      ipo('X', { fixed_price: 10000, performance: perf(12000) }),
+      ipo('Y', { fixed_price: 10000, performance: null }),
+      ipo('Z', { fixed_price: 5000, performance: perf(10000) }),
+    ]
+    expect(codes(sortIpos(listed, 'open_return_desc'))).toEqual(['Z', 'X', 'Y'])
+  })
   it('does not mutate the input', () => {
     sortIpos(list, 'ratio_desc')
     expect(codes(list)).toEqual(['A', 'B', 'C'])
