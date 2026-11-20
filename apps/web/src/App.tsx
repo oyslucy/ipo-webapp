@@ -10,9 +10,11 @@ import { StageTabs } from './components/StageTabs'
 import { UpdatedBadge } from './components/UpdatedBadge'
 import { ViewSwitch } from './components/ViewSwitch'
 import { WeekSummary } from './components/WeekSummary'
+import { WhatsNewModal } from './components/WhatsNewModal'
 import { useDataset } from './data/useDataset'
 import { useFavorites } from './data/useFavorites'
 import { useUrlState } from './data/useUrlState'
+import { useWhatsNew } from './data/useWhatsNew'
 import { eventsOf } from './domain/events'
 import { activeFilterCount, EMPTY_FILTER, matchesFilter, underwriterOptions } from './domain/filter'
 import { todayKst, type Dataset, type Ipo } from './domain/ipo'
@@ -20,6 +22,7 @@ import { sortIpos, sortLabel, type SortKey } from './domain/sort'
 import { summarize } from './domain/summary'
 import { firstNonEmptyTab, groupByTab, tabOf, TABS, type TabId } from './domain/tabs'
 import type { UrlState } from './domain/urlState'
+import { LATEST_RELEASE } from './domain/whatsNew'
 
 export default function App() {
   const state = useDataset()
@@ -37,8 +40,14 @@ export default function App() {
         <p className="mt-6 text-sm text-red-500">데이터를 불러오지 못했어요 ({state.message})</p>
       )}
       {state.status === 'ready' && <Board dataset={state.dataset} />}
+      {state.status === 'ready' && <WhatsNew />}
     </main>
   )
+}
+
+function WhatsNew() {
+  const [open, dismiss] = useWhatsNew(LATEST_RELEASE)
+  return <WhatsNewModal open={open} release={LATEST_RELEASE} onClose={dismiss} />
 }
 
 function Board({ dataset }: { dataset: Dataset }) {
