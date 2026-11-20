@@ -18,6 +18,7 @@ import { formatReturn, returnRate, toneOf } from '../domain/performance'
 import { scheduleOf, stepState, type StepState } from '../domain/schedule'
 import { expectedEqualShares, formatExpectedShares } from '../domain/broker'
 import { BottomSheet } from './BottomSheet'
+import { EqualCalculator } from './EqualCalculator'
 import { FavoriteButton } from './FavoriteButton'
 import { TONE_TEXT } from './toneStyle'
 
@@ -72,6 +73,7 @@ function SheetBody({ ipo, today, favorite, onToggleFavorite }: BodyProps) {
       {ipo.performance && <PriceAfterListing performance={ipo.performance} offer={ipo.fixed_price} />}
       <OfferingInfo ipo={ipo} />
       {ipo.brokers.length > 0 && <Brokers brokers={ipo.brokers} />}
+      {ipo.brokers.length > 0 && <EqualCalculator key={ipo.code} ipo={ipo} />}
       <Schedule ipo={ipo} today={today} />
       {ipo.company && <CompanyInfo company={ipo.company} />}
       {ipo.financials.length > 0 && <Financials rows={ipo.financials} />}
