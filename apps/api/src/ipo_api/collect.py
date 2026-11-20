@@ -11,8 +11,9 @@ from ipo_api.detail import DetailSchemaError, carry_detail, with_detail
 from ipo_api.live import in_subscription
 from ipo_api.merge import merge
 from ipo_api.models import Ipo
-from ipo_api.naver import fetch_detail, fetch_progress
+from ipo_api.naver import fetch_daily_prices, fetch_detail, fetch_progress
 from ipo_api.normalize import normalize_response
+from ipo_api.performance import carry_performance, is_listing_today, refresh_performance
 from ipo_api.store import load_ipos, save_dataset
 
 KST = ZoneInfo("Asia/Seoul")
@@ -60,11 +61,14 @@ def main() -> None:
     previous = load_ipos(args.out)
     if args.live:
         ipos = refresh_live(previous, today)
+        # Listing-day prices move all session, so the live run follows them too.
+        ipos = refresh_performance(ipos, today, fetch_daily_prices, is_listing_today)
         if ipos == previous:
             print("no live changes")
             return
     else:
         fresh = normalize_response(fetch_progress(), today=today)
         ipos = merge(previous, enrich(fresh, previous))
+        ipos = refresh_performance(carry_performance(ipos, previous), today, fetch_daily_prices)
     save_dataset(args.out, {"fetched_at": now.isoformat(timespec="seconds"), "ipos": ipos})
     print(f"saved {len(ipos)} ipos to {args.out}")

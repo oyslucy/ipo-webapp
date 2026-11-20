@@ -61,6 +61,7 @@ def normalize_item(raw: Mapping[str, Any], stage: Stage, today: str) -> Ipo:
         "withdrawn_on": text(raw, "rwDate"),
         "last_seen_on": today,
         "in_feed": True,
+        "performance": None,
         **EMPTY_DETAIL,
     }
 

@@ -11,6 +11,7 @@ _BACKFILL: dict[str, Any] = {
     "offering_amount_low": None,
     "offering_amount_high": None,
     "withdrawn_on": None,
+    "performance": None,
 }
 
 

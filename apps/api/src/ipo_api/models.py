@@ -47,6 +47,16 @@ class Document(TypedDict):
     url: str
 
 
+class Performance(TypedDict):
+    """Trading after listing; prices in won."""
+
+    open: int | None
+    high: int | None
+    close: int | None
+    latest_close: int | None
+    latest_on: str
+
+
 class IpoDetail(TypedDict):
     institution_ratio: float | None
     general_shares_min: int | None
@@ -88,6 +98,7 @@ class Ipo(IpoDetail):
     withdrawn_on: str | None
     last_seen_on: str
     in_feed: bool
+    performance: Performance | None
 
 
 class Dataset(TypedDict):
